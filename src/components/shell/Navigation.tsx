@@ -7,10 +7,9 @@ import {
   Sparkles,
   TriangleAlert,
   Truck,
-  Play,
 } from 'lucide-react'
 import { useTwinStore, type ViewId } from '@/state/twinStore'
-import { usePresentationStore } from '@/state/presentationStore'
+
 import { cn } from '@/lib/utils'
 import { Tooltip } from '@/components/ui/Tooltip'
 
@@ -23,7 +22,6 @@ const ITEMS: { id: ViewId | 'presentation'; label: string; icon: typeof Radar; h
   { id: 'scenarios', label: 'Scenarios', icon: GitBranch, hint: 'Saved intervention branches' },
   { id: 'environment', label: 'Environment', icon: Leaf, hint: 'Emissions and diversion impact' },
   { id: 'analytics', label: 'Analytics', icon: BarChart3, hint: 'Long-run system analytics' },
-  { id: 'presentation', label: 'Play Demo', icon: Play, hint: 'Start cinematic presentation' },
 ]
 
 /**
@@ -33,7 +31,7 @@ const ITEMS: { id: ViewId | 'presentation'; label: string; icon: typeof Radar; h
 export function Navigation() {
   const view = useTwinStore((s) => s.view)
   const setView = useTwinStore((s) => s.setView)
-  const startDemo = usePresentationStore((s) => s.startDemo)
+
 
   return (
     <nav className="absolute left-3 top-1/2 z-40 -translate-y-1/2">
@@ -43,13 +41,7 @@ export function Navigation() {
           return (
             <Tooltip key={id} label={label} hint={hint} side="right">
               <button
-                onClick={() => {
-                  if (id === 'presentation') {
-                    startDemo()
-                  } else {
-                    setView(id)
-                  }
-                }}
+                onClick={() => setView(id as ViewId)}
                 aria-current={active}
                 aria-label={label}
                 className={cn(

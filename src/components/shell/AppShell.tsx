@@ -6,8 +6,7 @@ import { TopBar } from './TopBar'
 import { Navigation } from './Navigation'
 import { BottomStatusBar } from './BottomStatusBar'
 
-import { usePresentationStore } from '@/state/presentationStore'
-import { PresentationView } from '@/components/views/PresentationView'
+
 
 /**
  * APP SHELL — the digital twin is never unmounted. Modules open over it, so the
@@ -15,7 +14,7 @@ import { PresentationView } from '@/components/views/PresentationView'
  */
 export function AppShell() {
   const view = useTwinStore((s) => s.view)
-  const isDemoActive = usePresentationStore((s) => s.isActive)
+
   const Module = view === 'twin' ? undefined : MODULE_VIEWS[view as keyof typeof MODULE_VIEWS]
 
   return (
@@ -26,7 +25,7 @@ export function AppShell() {
         <DigitalTwin />
         <Navigation />
         <AnimatePresence>{Module ? <Module key={view} /> : null}</AnimatePresence>
-        <AnimatePresence>{isDemoActive ? <PresentationView key="presentation" /> : null}</AnimatePresence>
+
       </div>
 
       <BottomStatusBar />

@@ -191,7 +191,7 @@ interface TwinStore {
  * the engine reads this state, it never owns it.
  */
 export const useTwinStore = create<TwinStore>((set, get) => ({
-  phase: 'landing',
+  phase: 'app',
   enterTwin: () => set({ phase: 'app' }),
   exitToLanding: () => set({ phase: 'landing', view: 'twin' }),
 
