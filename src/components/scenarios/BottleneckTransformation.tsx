@@ -14,7 +14,7 @@ export function BottleneckTransformation({
   return (
     <div
       className={cn(
-        'surface ticks border border-hair bg-white/[0.015] p-4 shadow-panel',
+        'surface ticks border border-hair bg-raised p-4 shadow-panel',
         className,
       )}
     >
@@ -37,12 +37,12 @@ export function BottleneckTransformation({
             ? 'border-signal/50 bg-signal/15 text-signal'
             : isReduced
               ? 'border-cyan-400/50 bg-cyan-400/15 text-cyan-400'
-              : 'border-white/10 bg-white/[0.04] text-ink-ghost'
+              : 'border-white/10 bg-raised text-ink-ghost'
 
           return (
             <div
               key={diff.facilityId}
-              className="border border-hair/50 bg-white/[0.01] p-3 flex flex-col justify-between"
+              className="border border-hair/50 bg-raised p-3 flex flex-col justify-between"
             >
               <div>
                 <div className="flex items-center justify-between">

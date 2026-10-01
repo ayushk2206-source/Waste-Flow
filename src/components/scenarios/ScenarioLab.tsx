@@ -175,12 +175,12 @@ export const ScenarioLab: React.FC = () => {
         /* Library Mode */
         <div className="space-y-6">
           {/* Header Action Bar */}
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 p-5 rounded-2xl bg-white/[0.02] border border-white/10 backdrop-blur-md">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 p-5 rounded-2xl bg-raised border border-white/10 ">
             <div>
               <div className="flex items-center gap-2.5">
                 <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
                 <h2 className="text-xl font-bold text-white tracking-tight">Scenario Testing Library</h2>
-                <span className="text-[11px] font-mono px-2 py-0.5 rounded-full bg-white/10 text-white/70">
+                <span className="text-[11px] font-mono px-2 py-0.5 rounded-full bg-raised text-white/70">
                   {allScenarios.length} SCENARIOS
                 </span>
               </div>
@@ -204,7 +204,7 @@ export const ScenarioLab: React.FC = () => {
               {/* Reset Substrate to Live Baseline */}
               <button
                 onClick={handleResetToBaseline}
-                className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white/60 hover:text-white text-xs font-medium transition-colors"
+                className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-raised hover:bg-raised border border-white/10 text-white/60 hover:text-white text-xs font-medium transition-colors"
                 title="Ensure digital twin is showing live baseline"
               >
                 <RotateCcw size={13} />

@@ -38,7 +38,7 @@ export function TopBar() {
   const activeCity = cityOptions.find((c) => c.id === cityId) ?? cityOptions[0]
 
   return (
-    <header className="relative z-40 flex h-12 items-center gap-3 border-b border-hair bg-base/85 px-3 backdrop-blur-xl">
+    <header className="relative z-40 flex h-12 items-center gap-3 border-b border-hair bg-base/85 px-3 ">
       <button
         onClick={exitToLanding}
         className="focus-ring group flex items-center gap-2.5 pl-0.5 pr-2 text-signal"
@@ -69,7 +69,7 @@ export function TopBar() {
           onClick={() => setCityOpen((v) => !v)}
           className={cn(
             'focus-ring flex h-7 items-center gap-2 border px-2 font-mono text-[10px] uppercase tracking-[0.14em] transition-colors duration-200',
-            cityOpen ? 'border-hair2 bg-white/[0.05] text-ink' : 'border-hair text-ink-dim hover:border-hair2 hover:text-ink',
+            cityOpen ? 'border-hair2 bg-raised text-ink' : 'border-hair text-ink-dim hover:border-hair2 hover:text-ink',
           )}
         >
           <MapPin size={11.5} strokeWidth={1.75} className="text-signal/80" />
@@ -103,7 +103,7 @@ export function TopBar() {
                         }}
                         className={cn(
                           'focus-ring flex w-full items-center gap-2.5 px-3 py-2 text-left transition-colors',
-                          live ? 'hover:bg-white/[0.045]' : 'cursor-not-allowed opacity-45',
+                          live ? 'hover:bg-raised' : 'cursor-not-allowed opacity-45',
                         )}
                       >
                         <CircleDot size={10} strokeWidth={2} className={live ? 'text-signal' : 'text-ink-ghost'} />
@@ -185,7 +185,7 @@ export function TopBar() {
                 </header>
                 <ul className="divide-y divide-white/[0.055]">
                   {notifications.map((n) => (
-                    <li key={n.id} className={cn('px-3 py-2.5 transition-colors hover:bg-white/[0.03]', n.read && 'opacity-55')}>
+                    <li key={n.id} className={cn('px-3 py-2.5 transition-colors hover:bg-raised', n.read && 'opacity-55')}>
                       <div className="flex items-start gap-2">
                         <span
                           className="mt-[5px] h-1.5 w-1.5 shrink-0"
@@ -250,7 +250,7 @@ export function TopBar() {
                 <div className="border-t border-hair p-1">
                   <button
                     onClick={exitToLanding}
-                    className="focus-ring w-full px-2 py-1.5 text-left font-mono text-[9.5px] uppercase tracking-[0.14em] text-ink-dim transition-colors hover:bg-white/[0.05] hover:text-ink"
+                    className="focus-ring w-full px-2 py-1.5 text-left font-mono text-[9.5px] uppercase tracking-[0.14em] text-ink-dim transition-colors hover:bg-raised hover:text-ink"
                   >
                     Exit to entry sequence
                   </button>

@@ -108,7 +108,7 @@ export function BeforeAfterMetricTable({
   return (
     <div
       className={cn(
-        'surface ticks border border-hair bg-white/[0.015] p-4 shadow-panel space-y-4',
+        'surface ticks border border-hair bg-raised p-4 shadow-panel space-y-4',
         className,
       )}
     >
@@ -123,7 +123,7 @@ export function BeforeAfterMetricTable({
       </div>
 
       {/* Visual Comparison Bars for Core Indicators */}
-      <div className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-4 border border-hair/50 bg-white/[0.01] p-3">
+      <div className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-4 border border-hair/50 bg-raised p-3">
         <VisualComparisonBar
           label="CO₂e EMISSIONS"
           baseline={baselineMetrics.co2eKg}
@@ -193,7 +193,7 @@ export function BeforeAfterMetricTable({
                   : 'text-critical'
 
               return (
-                <tr key={row.label} className="hover:bg-white/[0.015] transition-colors">
+                <tr key={row.label} className="hover:bg-raised transition-colors">
                   <td className="py-2 pl-2 text-ink-dim flex items-center gap-1.5">
                     <span className="h-1 w-1 bg-signal/60 rounded-full" />
                     <span>{row.label}</span>
@@ -257,8 +257,8 @@ function VisualComparisonBar({
             {formatNumber(baseline)} {unit}
           </span>
         </div>
-        <div className="h-1 w-full bg-white/[0.05]">
-          <div className="h-full bg-white/30" style={{ width: `${baseRatio}%` }} />
+        <div className="h-1 w-full bg-raised">
+          <div className="h-full bg-raised" style={{ width: `${baseRatio}%` }} />
         </div>
       </div>
 
@@ -270,7 +270,7 @@ function VisualComparisonBar({
             {formatNumber(simulated)} {unit}
           </span>
         </div>
-        <div className="h-1 w-full bg-white/[0.05]">
+        <div className="h-1 w-full bg-raised">
           <div
             className={cn('h-full', isPositive ? 'bg-signal' : 'bg-critical')}
             style={{ width: `${simRatio}%` }}

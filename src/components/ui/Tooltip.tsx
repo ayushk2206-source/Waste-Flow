@@ -25,7 +25,7 @@ export function Tooltip({ label, hint, side = 'right', children, className }: To
       {children}
       <span
         className={cn(
-          'pointer-events-none absolute z-50 whitespace-nowrap border border-hair bg-panel/95 px-2 py-1 opacity-0 shadow-panel backdrop-blur-md transition-all duration-150 ease-nexus group-hover/tip:opacity-100',
+          'pointer-events-none absolute z-50 whitespace-nowrap border border-hair bg-panel px-2 py-1 opacity-0 shadow-panel  transition-all duration-150 ease-nexus group-hover/tip:opacity-100',
           sideClass,
         )}
       >

@@ -149,13 +149,7 @@ export function AmbientField({ className }: { className?: string }) {
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
       ctx.clearRect(0, 0, width, height)
 
-      // Warm glow behind the headline block
-      const glow = ctx.createRadialGradient(width * 0.22, height * 0.46, 0, width * 0.22, height * 0.46, width * 0.6)
-      glow.addColorStop(0, 'rgba(24,52,48,0.5)')
-      glow.addColorStop(0.5, 'rgba(10,16,20,0.28)')
-      glow.addColorStop(1, 'rgba(4,5,6,0)')
-      ctx.fillStyle = glow
-      ctx.fillRect(0, 0, width, height)
+      // No glow for a sharper, darker aesthetic
 
       drawFloor(time)
 

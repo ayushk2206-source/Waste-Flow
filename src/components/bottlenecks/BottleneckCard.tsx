@@ -42,7 +42,7 @@ export function BottleneckCard({
       whileHover={{ y: -2 }}
       onClick={() => onOpen(bottleneck)}
       className={cn(
-        'surface ticks group relative border-hair bg-white/[0.015] px-4 py-3.5 text-left shadow-panel transition-colors hover:bg-white/[0.035]',
+        'surface ticks group relative border-hair bg-raised px-4 py-3.5 text-left shadow-panel transition-colors hover:bg-raised',
         className,
       )}
     >
@@ -68,7 +68,7 @@ export function BottleneckCard({
             </span>
 
             {/* Bottleneck Type */}
-            <span className="border border-white/10 bg-white/[0.04] px-1.5 py-[2px] font-mono text-[7.5px] tracking-[0.12em] text-ink-dim">
+            <span className="border border-white/10 bg-raised px-1.5 py-[2px] font-mono text-[7.5px] tracking-[0.12em] text-ink-dim">
               {bottleneck.bottleneckTypeLabel.toUpperCase()}
             </span>
 

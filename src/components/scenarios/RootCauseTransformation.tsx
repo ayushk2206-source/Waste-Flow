@@ -12,7 +12,7 @@ export function RootCauseTransformation({
   return (
     <div
       className={cn(
-        'surface ticks border border-hair bg-white/[0.015] p-4 shadow-panel',
+        'surface ticks border border-hair bg-raised p-4 shadow-panel',
         className,
       )}
     >
@@ -35,7 +35,7 @@ export function RootCauseTransformation({
           <div className="flex flex-wrap items-center gap-2 font-mono text-[8.5px]">
             {scenario.causalChainBefore.map((step, i) => (
               <div key={i} className="flex items-center gap-1.5">
-                <div className="border border-critical/40 bg-white/[0.02] px-2 py-1">
+                <div className="border border-critical/40 bg-raised px-2 py-1">
                   <span className="text-critical font-bold block text-[7px]">{step.label}</span>
                   <span className="text-ink-dim block text-[8px]">{step.detail}</span>
                 </div>
@@ -55,7 +55,7 @@ export function RootCauseTransformation({
           <div className="flex flex-wrap items-center gap-2 font-mono text-[8.5px]">
             {scenario.causalChainAfter.map((step, i) => (
               <div key={i} className="flex items-center gap-1.5">
-                <div className="border border-signal/40 bg-white/[0.02] px-2 py-1">
+                <div className="border border-signal/40 bg-raised px-2 py-1">
                   <span className="text-signal font-bold block text-[7px]">{step.label}</span>
                   <span className="text-ink-dim block text-[8px]">{step.detail}</span>
                 </div>

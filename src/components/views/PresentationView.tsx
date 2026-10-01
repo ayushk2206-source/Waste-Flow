@@ -105,7 +105,7 @@ export function PresentationView() {
               resetLayers()
               setView('twin')
             }}
-            className="flex items-center gap-2 px-4 py-2 bg-black/50 text-white/70 border border-white/20 rounded font-mono text-sm hover:bg-white/10 hover:text-white transition-colors"
+            className="flex items-center gap-2 px-4 py-2 bg-black/50 text-white/70 border border-white/20 rounded font-mono text-sm hover:bg-raised hover:text-white transition-colors"
           >
             Exit Demo
           </button>

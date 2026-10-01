@@ -88,14 +88,14 @@ export const EnvironmentalHealthRadar: React.FC<EnvironmentalHealthRadarProps> =
   const gridRings = [0.25, 0.5, 0.75, 1.0]
 
   return (
-    <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/10 backdrop-blur-md shadow-xl space-y-4">
+    <div className="p-5 rounded-2xl bg-raised border border-white/10  shadow-xl space-y-4">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-white/5">
         <div>
           <div className="flex items-center gap-2">
             <span className="text-xs font-mono uppercase tracking-wider text-emerald-400 font-semibold">
               SYSTEM INTEGRITY MATRIX
             </span>
-            <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-white/5 text-white/60">
+            <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-raised text-white/60">
               5-AXIS ENVIRONMENTAL HEALTH
             </span>
           </div>
@@ -105,7 +105,7 @@ export const EnvironmentalHealthRadar: React.FC<EnvironmentalHealthRadarProps> =
         </div>
 
         <div className="flex items-center gap-2 shrink-0">
-          <div className="px-3 py-1.5 rounded-xl bg-white/5 border border-white/10 text-right">
+          <div className="px-3 py-1.5 rounded-xl bg-raised border border-white/10 text-right">
             <span className="text-[9px] font-mono text-white/40 block">COMPOSITE INDEX</span>
             <span className="text-sm font-bold font-mono text-white">
               {healthDimensions.overallCompositeScore}
@@ -197,7 +197,7 @@ export const EnvironmentalHealthRadar: React.FC<EnvironmentalHealthRadarProps> =
           {dimensions.map((dim) => (
             <div
               key={dim.key}
-              className="p-3 rounded-xl bg-white/[0.015] border border-white/5 hover:border-white/15 transition-all"
+              className="p-3 rounded-xl bg-raised border border-white/5 hover:border-white/15 transition-all"
             >
               <div className="flex items-center justify-between mb-1.5">
                 <span className="text-[10px] font-mono uppercase tracking-wider text-white/60 font-medium">
@@ -220,7 +220,7 @@ export const EnvironmentalHealthRadar: React.FC<EnvironmentalHealthRadarProps> =
               </div>
 
               {/* Progress bar */}
-              <div className="w-full h-1.5 rounded-full bg-white/5 mt-2 overflow-hidden">
+              <div className="w-full h-1.5 rounded-full bg-raised mt-2 overflow-hidden">
                 <div
                   className="h-full rounded-full transition-all duration-500"
                   style={{

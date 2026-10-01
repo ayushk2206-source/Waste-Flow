@@ -33,7 +33,7 @@ export const ExecutiveMetrics: React.FC<ExecutiveMetricsProps> = ({
       icon: Scale,
       subtext: `${formatNumber(summary.totalGeneratedT)} T generated · ${summary.totalGeneratedT - summary.totalCollectedT} T gap`,
       color: 'text-white',
-      accent: 'border-white/10 bg-white/[0.02]',
+      accent: 'border-white/10 bg-raised',
       delta: null,
       tooltip: 'Total waste physically collected by the system.',
     },
@@ -132,7 +132,7 @@ export const ExecutiveMetrics: React.FC<ExecutiveMetricsProps> = ({
           return (
             <div
               key={i}
-              className={`p-4 rounded-xl border ${c.accent} flex flex-col justify-between hover:border-white/20 transition-all shadow-lg backdrop-blur-sm`}
+              className={`p-4 rounded-xl border ${c.accent} flex flex-col justify-between hover:border-white/20 transition-all shadow-lg `}
             >
               <div>
                 <div className="flex items-center justify-between mb-2">
@@ -141,7 +141,7 @@ export const ExecutiveMetrics: React.FC<ExecutiveMetricsProps> = ({
                       {c.label}
                     </span>
                   </div>
-                  <div className="p-1 rounded-lg bg-white/5" title={c.tooltip}>
+                  <div className="p-1 rounded-lg bg-raised" title={c.tooltip}>
                     <Icon size={13} className={c.color} />
                   </div>
                 </div>

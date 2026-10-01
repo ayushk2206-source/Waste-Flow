@@ -102,7 +102,7 @@ export function ScenarioReplayModal({
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="fixed inset-0 z-50 grid place-items-center bg-void/80 p-4 backdrop-blur-[6px]"
+        className="fixed inset-0 z-50 grid place-items-center bg-void p-4 -[6px]"
         onClick={onClose}
       >
         <motion.article
@@ -141,7 +141,7 @@ export function ScenarioReplayModal({
             </div>
 
             {/* Progress Bar */}
-            <div className="h-1 w-full bg-white/[0.06] overflow-hidden">
+            <div className="h-1 w-full bg-raised overflow-hidden">
               <motion.div
                 className="h-full bg-signal"
                 initial={{ width: '0%' }}
@@ -159,7 +159,7 @@ export function ScenarioReplayModal({
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.3 }}
-              className="border border-hair bg-white/[0.02] p-4 space-y-2"
+              className="border border-hair bg-raised p-4 space-y-2"
             >
               <div className="flex items-center gap-2">
                 <Icon size={16} className="text-signal animate-pulse" />

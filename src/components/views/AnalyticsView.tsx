@@ -26,9 +26,9 @@ export function AnalyticsView() {
       description="System-level performance across the mesh, computed by the calculation engine: live-window figures, the 7-day deterministic ledger and the chart surface. The history store and comparative analytics arrive with the time-series pipeline."
       phase="CALCULATION ENGINE · PHASE 3"
     >
-      <div className="grid grid-cols-2 gap-px border border-hair bg-white/[0.045] lg:grid-cols-3 xl:grid-cols-6">
+      <div className="grid grid-cols-2 gap-px border border-hair bg-raised lg:grid-cols-3 xl:grid-cols-6">
         {model.metrics.map((m) => (
-          <MetricCard key={m.id} metric={m} className="border-0 bg-void/40" />
+          <MetricCard key={m.id} metric={m} className="border-0 bg-void" />
         ))}
       </div>
 
@@ -43,7 +43,7 @@ export function AnalyticsView() {
             const prev = series[series.length - 2] ?? latest
             const delta = ((latest - prev) / prev) * 100
             return (
-              <article key={p.id} className="border border-hair bg-white/[0.015] px-3.5 py-3">
+              <article key={p.id} className="border border-hair bg-raised px-3.5 py-3">
                 <div className="flex items-baseline justify-between">
                   <span className="label-tech text-[8.5px]">{p.title}</span>
                   <span className="font-mono text-[9px] tracking-[0.1em] text-ink-ghost">{p.unit}</span>
@@ -75,7 +75,7 @@ export function AnalyticsView() {
         <div className="overflow-x-auto border border-hair">
           <table className="w-full min-w-[860px] border-collapse text-left">
             <thead>
-              <tr className="border-b border-hair bg-white/[0.02]">
+              <tr className="border-b border-hair bg-raised">
                 {['DAY', 'GENERATED', 'COLLECTED', 'PROCESSED', 'RECOVERED', 'LANDFILL', 'BACKLOG', 'TRIPS', 'FUEL L', 'CO₂e KG'].map((h) => (
                   <th key={h} className="px-3 py-2 font-mono text-[8.5px] font-normal uppercase tracking-[0.14em] text-ink-ghost">
                     {h}
@@ -91,7 +91,7 @@ export function AnalyticsView() {
                     key={d.day}
                     className={cn(
                       'border-b border-hair/60 transition-colors last:border-0',
-                      isToday ? 'bg-signal/[0.06]' : 'hover:bg-white/[0.03]',
+                      isToday ? 'bg-signal/[0.06]' : 'hover:bg-raised',
                     )}
                   >
                     <td className="px-3 py-2">
@@ -136,7 +136,7 @@ export function AnalyticsView() {
       </section>
 
       <section className="mt-5 grid gap-3 lg:grid-cols-2">
-        <div className="border border-hair bg-white/[0.015] px-4 py-3.5">
+        <div className="border border-hair bg-raised px-4 py-3.5">
           <SectionTitle code="SCOPE">SYSTEM TOTALS</SectionTitle>
           <dl className="grid grid-cols-2 gap-y-2.5">
             {[
@@ -157,7 +157,7 @@ export function AnalyticsView() {
           </dl>
         </div>
 
-        <div className="border border-hair bg-white/[0.015] px-4 py-3.5">
+        <div className="border border-hair bg-raised px-4 py-3.5">
           <SectionTitle code="PHASE 2">PLANNED ANALYTICS</SectionTitle>
           <ul className="space-y-2.5">
             {[

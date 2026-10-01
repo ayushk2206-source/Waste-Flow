@@ -39,7 +39,7 @@ export function SimulationPlaceholder({ className }: { className?: string }) {
             setView('simulation')
             selectRoute(null)
           }}
-          className="focus-ring flex h-7 flex-1 items-center justify-center gap-1.5 border border-hair bg-white/[0.02] font-mono text-[9.5px] uppercase tracking-[0.14em] text-ink transition-colors hover:bg-white/[0.06]"
+          className="focus-ring flex h-7 flex-1 items-center justify-center gap-1.5 border border-hair bg-raised font-mono text-[9.5px] uppercase tracking-[0.14em] text-ink transition-colors hover:bg-raised"
         >
           <Play size={10} strokeWidth={1.75} />
           ENTER LAB

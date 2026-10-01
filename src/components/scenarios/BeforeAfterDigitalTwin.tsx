@@ -41,7 +41,7 @@ export function BeforeAfterDigitalTwin({
   return (
     <div
       className={cn(
-        'surface ticks border border-hair bg-white/[0.015] p-4 shadow-panel',
+        'surface ticks border border-hair bg-raised p-4 shadow-panel',
         className,
       )}
     >
@@ -81,7 +81,7 @@ export function BeforeAfterDigitalTwin({
       </div>
 
       {/* Slider Control */}
-      <div className="mt-3.5 space-y-1.5 border border-hair/50 bg-white/[0.01] p-3">
+      <div className="mt-3.5 space-y-1.5 border border-hair/50 bg-raised p-3">
         <div className="flex items-center justify-between font-mono text-[8.5px]">
           <span className={compareSlider < 50 ? 'text-critical font-bold' : 'text-ink-ghost'}>
             CURRENT LIVE SYSTEM (0%)
@@ -107,7 +107,7 @@ export function BeforeAfterDigitalTwin({
       {/* Before / After Twin Infrastructure State Breakdown */}
       <div className="mt-3.5 grid gap-3 sm:grid-cols-3 font-mono text-[9px]">
         {/* Node Status */}
-        <div className="border border-hair/50 bg-white/[0.01] p-2.5">
+        <div className="border border-hair/50 bg-raised p-2.5">
           <div className="flex items-center justify-between text-ink-ghost text-[7.5px] uppercase">
             <span>TARGET NODE UTILIZATION</span>
             <span>STATUS</span>
@@ -127,7 +127,7 @@ export function BeforeAfterDigitalTwin({
         </div>
 
         {/* Gate Queue Dwell */}
-        <div className="border border-hair/50 bg-white/[0.01] p-2.5">
+        <div className="border border-hair/50 bg-raised p-2.5">
           <div className="flex items-center justify-between text-ink-ghost text-[7.5px] uppercase">
             <span>GATE QUEUE DWELL TIME</span>
             <span>DWELL</span>
@@ -148,7 +148,7 @@ export function BeforeAfterDigitalTwin({
         </div>
 
         {/* Backlog State */}
-        <div className="border border-hair/50 bg-white/[0.01] p-2.5">
+        <div className="border border-hair/50 bg-raised p-2.5">
           <div className="flex items-center justify-between text-ink-ghost text-[7.5px] uppercase">
             <span>RECEPTION HOPPER BACKLOG</span>
             <span>BACKLOG</span>

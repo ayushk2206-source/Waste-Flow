@@ -35,7 +35,7 @@ export function SimulationHistory({
           return (
             <div
               key={sc.scenarioId}
-              className="group flex flex-col justify-between border border-hair bg-white/[0.015] p-3 transition-colors hover:bg-white/[0.035]"
+              className="group flex flex-col justify-between border border-hair bg-raised p-3 transition-colors hover:bg-raised"
             >
               <div>
                 <div className="flex items-center justify-between">

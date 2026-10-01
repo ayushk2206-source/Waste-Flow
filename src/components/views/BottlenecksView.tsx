@@ -177,7 +177,7 @@ export function BottlenecksView() {
       {/* ── STAGE FLOW SECTION ──────────────────────────────── */}
       <section className="mt-5">
         <SectionTitle code="NETWORK THROUGHPUT CURRENT">HORIZONTAL STAGE FLOW</SectionTitle>
-        <div className="surface ticks border-hair bg-white/[0.01] shadow-panel">
+        <div className="surface ticks border-hair bg-raised shadow-panel">
           <StageFlow stages={stages} />
         </div>
         <p className="mt-2 font-mono text-[8.5px] leading-relaxed tracking-[0.08em] text-ink-ghost">
@@ -197,7 +197,7 @@ export function BottlenecksView() {
         </div>
 
         {/* Filter and search bar */}
-        <div className="mt-2 flex flex-wrap items-center gap-2 border border-hair bg-white/[0.015] p-2.5">
+        <div className="mt-2 flex flex-wrap items-center gap-2 border border-hair bg-raised p-2.5">
           {/* Search */}
           <div className="relative min-w-[180px] flex-1">
             <Search size={11} className="absolute left-2.5 top-1/2 -translate-y-1/2 text-ink-ghost" />
@@ -206,7 +206,7 @@ export function BottlenecksView() {
               placeholder="Search facility or cause..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full border border-hair bg-void/80 py-1 pl-7 pr-2 font-mono text-[9px] text-ink placeholder:text-ink-ghost focus:border-signal/60 focus:outline-none"
+              className="w-full border border-hair bg-void py-1 pl-7 pr-2 font-mono text-[9px] text-ink placeholder:text-ink-ghost focus:border-signal/60 focus:outline-none"
             />
           </div>
 
@@ -219,7 +219,7 @@ export function BottlenecksView() {
                 className={`border px-2 py-1 font-mono text-[7.5px] tracking-[0.12em] transition-colors ${
                   severityFilter === sev
                     ? 'border-signal/60 bg-signal/10 text-signal'
-                    : 'border-hair bg-white/[0.01] text-ink-faint hover:text-ink'
+                    : 'border-hair bg-raised text-ink-faint hover:text-ink'
                 }`}
               >
                 {sev}
@@ -231,7 +231,7 @@ export function BottlenecksView() {
           <select
             value={typeFilter}
             onChange={(e) => setTypeFilter(e.target.value)}
-            className="border border-hair bg-void/80 px-2 py-1 font-mono text-[8px] tracking-[0.06em] text-ink focus:border-signal/60 focus:outline-none"
+            className="border border-hair bg-void px-2 py-1 font-mono text-[8px] tracking-[0.06em] text-ink focus:border-signal/60 focus:outline-none"
           >
             <option value="ALL">ALL TYPES</option>
             <option value="CAPACITY_BOTTLENECK">CAPACITY</option>
@@ -249,7 +249,7 @@ export function BottlenecksView() {
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value as SortBy)}
-              className="border border-hair bg-void/80 px-2 py-1 font-mono text-[8px] tracking-[0.06em] text-ink focus:border-signal/60 focus:outline-none"
+              className="border border-hair bg-void px-2 py-1 font-mono text-[8px] tracking-[0.06em] text-ink focus:border-signal/60 focus:outline-none"
             >
               <option value="pressure">SCORE</option>
               <option value="delayed">DELAYED TONNAGE</option>
@@ -268,7 +268,7 @@ export function BottlenecksView() {
         </div>
 
         {filteredBottlenecks.length === 0 && (
-          <div className="border border-hair bg-white/[0.015] p-5 text-center font-mono text-[10px] text-ink-faint">
+          <div className="border border-hair bg-raised p-5 text-center font-mono text-[10px] text-ink-faint">
             No bottlenecks matching the active filters.
           </div>
         )}
@@ -288,7 +288,7 @@ export function BottlenecksView() {
                 <button
                   key={z.facility.id}
                   onClick={() => openOnMap(z.facility.id)}
-                  className="focus-ring border border-hair bg-white/[0.015] px-3 py-2.5 text-left transition-colors hover:bg-white/[0.04]"
+                  className="focus-ring border border-hair bg-raised px-3 py-2.5 text-left transition-colors hover:bg-raised"
                 >
                   <div className="flex items-center gap-2">
                     <span className="h-1.5 w-1.5" style={{ background: color }} />
@@ -349,7 +349,7 @@ function KpiCard({
       initial={{ opacity: 0, y: 14 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.45, delay, ease: EASE }}
-      className="surface ticks border-hair bg-white/[0.015] px-3.5 py-3 shadow-panel"
+      className="surface ticks border-hair bg-raised px-3.5 py-3 shadow-panel"
     >
       <div className="flex items-center gap-2">
         <span className="text-ink-faint">{icon}</span>

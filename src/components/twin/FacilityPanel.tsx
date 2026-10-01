@@ -288,7 +288,7 @@ const PanelBody = forwardRef<HTMLDivElement, PanelBodyProps>(function PanelBody(
         )}
 
         {isZone && collection && (
-          <div className="grid grid-cols-2 gap-x-3 gap-y-1.5 border border-hair bg-white/[0.015] px-3 py-2.5">
+          <div className="grid grid-cols-2 gap-x-3 gap-y-1.5 border border-hair bg-raised px-3 py-2.5">
             <Telemetry label="FREQUENCY" value={facility.collection?.frequency ?? '—'} wide />
             <Telemetry label="ASSIGNED VEHICLES" value={`${collection.vehicleCount} UNITS`} />
             <Telemetry label="AVG CAPACITY" value={`${collection.avgVehicleCapacityT} T`} />
@@ -311,7 +311,7 @@ const PanelBody = forwardRef<HTMLDivElement, PanelBodyProps>(function PanelBody(
                 initial={{ height: 2, opacity: 0 }}
                 animate={{ height: `${Math.max(6, (v / maxSeries) * 100)}%`, opacity: 1 }}
                 transition={{ duration: 0.4, delay: 0.02 * i, ease: [0.22, 1, 0.36, 1] }}
-                className={cn('flex-1', i === series.length - 1 ? 'bg-signal/80' : 'bg-white/[0.14] hover:bg-white/25')}
+                className={cn('flex-1', i === series.length - 1 ? 'bg-signal/80' : 'bg-raised hover:bg-raised')}
               />
             ))}
           </div>

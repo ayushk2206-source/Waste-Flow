@@ -14,7 +14,7 @@ export function TradeoffPanel({
   return (
     <div
       className={cn(
-        'surface ticks border border-hair bg-white/[0.015] p-4 shadow-panel',
+        'surface ticks border border-hair bg-raised p-4 shadow-panel',
         className,
       )}
     >
@@ -62,15 +62,15 @@ export function TradeoffPanel({
 
       {/* Implementation Indicators Strip */}
       <div className="mt-3 grid grid-cols-3 gap-2 border-t border-hair/40 pt-2.5 font-mono text-[8px]">
-        <div className="border border-hair/40 bg-white/[0.01] p-2 flex items-center justify-between">
+        <div className="border border-hair/40 bg-raised p-2 flex items-center justify-between">
           <span className="text-ink-ghost">CAPITAL REQUIREMENT:</span>
           <span className="font-bold text-ink">{tradeoffs.capitalRequirement} CAPEX</span>
         </div>
-        <div className="border border-hair/40 bg-white/[0.01] p-2 flex items-center justify-between">
+        <div className="border border-hair/40 bg-raised p-2 flex items-center justify-between">
           <span className="text-ink-ghost">OPERATIONAL COMPLEXITY:</span>
           <span className="font-bold text-ink">{tradeoffs.operationalComplexity}</span>
         </div>
-        <div className="border border-hair/40 bg-white/[0.01] p-2 flex items-center justify-between">
+        <div className="border border-hair/40 bg-raised p-2 flex items-center justify-between">
           <span className="text-ink-ghost">TIME TO COMMISSION:</span>
           <span className="font-bold text-signal">{tradeoffs.timeToDeploy}</span>
         </div>

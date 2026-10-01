@@ -37,7 +37,7 @@ export function SimulationPresets({
                 'group relative flex flex-col justify-between border p-2.5 text-left transition-all',
                 isSelected
                   ? 'border-signal/80 bg-signal/[0.08] shadow-panel ring-1 ring-signal/40'
-                  : 'border-hair bg-white/[0.015] hover:border-hair2 hover:bg-white/[0.035]',
+                  : 'border-hair bg-raised hover:border-hair2 hover:bg-raised',
               )}
             >
               <div>

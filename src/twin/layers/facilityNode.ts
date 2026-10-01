@@ -61,15 +61,15 @@ export function drawNodes(rc: RenderContext) {
     ctx.save()
     ctx.globalAlpha = focus
 
-    // Halo: selection, hover, or a graded state glow.
+    // Halo: selection, hover, or a graded state glow. Reduced for sharper look.
     if (isSelected || isHovered || state !== 'normal') {
-      const strength = isSelected ? 0.17 : isHovered ? 0.11 : STATE_ORDER[state] === 2 ? 0.1 : 0.06
-      const halo = ctx.createRadialGradient(node.x, node.y, r * 0.4, node.x, node.y, r * 3.4)
+      const strength = isSelected ? 0.10 : isHovered ? 0.06 : STATE_ORDER[state] === 2 ? 0.08 : 0.04
+      const halo = ctx.createRadialGradient(node.x, node.y, r * 0.8, node.x, node.y, r * 1.8)
       halo.addColorStop(0, rgbaStr(color, strength))
       halo.addColorStop(1, rgbaStr(color, 0))
       ctx.fillStyle = halo
       ctx.beginPath()
-      ctx.arc(node.x, node.y, r * 3.4, 0, TAU)
+      ctx.arc(node.x, node.y, r * 1.8, 0, TAU)
       ctx.fill()
     }
 

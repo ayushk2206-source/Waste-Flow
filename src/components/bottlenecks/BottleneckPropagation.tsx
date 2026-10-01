@@ -35,7 +35,7 @@ export function BottleneckPropagation({
               ? 'border-critical/30 bg-critical/[0.04]'
               : step.tone === 'warn'
                 ? 'border-warn/30 bg-warn/[0.04]'
-                : 'border-hair bg-white/[0.015]'
+                : 'border-hair bg-raised'
 
           const badgeColor =
             step.tone === 'critical'

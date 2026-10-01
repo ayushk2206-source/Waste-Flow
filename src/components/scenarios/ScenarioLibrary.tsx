@@ -49,7 +49,7 @@ export function ScenarioLibrary({
   return (
     <div className={`space-y-4 ${className ?? ''}`}>
       {/* ── FILTER & SEARCH BAR ──────────────────────────────── */}
-      <div className="flex flex-col gap-2.5 border border-hair bg-white/[0.015] p-3 sm:flex-row sm:items-center sm:justify-between">
+      <div className="flex flex-col gap-2.5 border border-hair bg-raised p-3 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex flex-1 items-center gap-2">
           {/* Search Box */}
           <div className="relative flex-1 max-w-xs">
@@ -64,7 +64,7 @@ export function ScenarioLibrary({
                 setFilters((prev) => ({ ...prev, searchQuery: e.target.value }))
               }
               placeholder="Search scenarios by name, target, or move..."
-              className="w-full border border-hair bg-void/80 pl-8 pr-3 py-1 font-mono text-[9.5px] text-ink focus:border-signal/60 focus:outline-none"
+              className="w-full border border-hair bg-void pl-8 pr-3 py-1 font-mono text-[9.5px] text-ink focus:border-signal/60 focus:outline-none"
             />
           </div>
 
@@ -79,7 +79,7 @@ export function ScenarioLibrary({
                 className={`border px-2 py-0.5 font-mono text-[8px] uppercase tracking-wider transition-colors ${
                   filters.categoryFilter === cat
                     ? 'border-signal/60 bg-signal/15 text-signal font-semibold'
-                    : 'border-hair bg-white/[0.01] text-ink-faint hover:text-ink'
+                    : 'border-hair bg-raised text-ink-faint hover:text-ink'
                 }`}
               >
                 {cat}
@@ -116,7 +116,7 @@ export function ScenarioLibrary({
 
       {/* ── SCENARIO GRID OR EMPTY STATE ──────────────────────── */}
       {filteredList.length === 0 ? (
-        <div className="surface border border-hair bg-white/[0.01] p-10 text-center">
+        <div className="surface border border-hair bg-raised p-10 text-center">
           <Wand2 size={24} className="mx-auto text-ink-ghost mb-2 animate-pulse" />
           <h3 className="font-mono text-[13px] font-semibold text-ink">
             No Scenarios Found

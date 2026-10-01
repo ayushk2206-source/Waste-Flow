@@ -55,7 +55,7 @@ export function RecommendationDetailModal({
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="fixed inset-0 z-50 grid place-items-center bg-void/70 p-3 backdrop-blur-[4px]"
+        className="fixed inset-0 z-50 grid place-items-center bg-void p-3 -[4px]"
         onClick={onClose}
       >
         <motion.article
@@ -67,7 +67,7 @@ export function RecommendationDetailModal({
           className="surface ticks atmos-noise relative flex max-h-[92vh] w-full max-w-[980px] flex-col border border-hair bg-void shadow-panel overflow-hidden"
         >
           {/* Header */}
-          <header className="relative border-b border-hair px-5 py-3.5 bg-white/[0.015]">
+          <header className="relative border-b border-hair px-5 py-3.5 bg-raised">
             <div className="flex items-start justify-between gap-4">
               <div>
                 <div className="flex flex-wrap items-center gap-2">
@@ -75,7 +75,7 @@ export function RecommendationDetailModal({
                     {recommendation.category} INTERVENTION
                   </span>
 
-                  <span className="border border-white/10 bg-white/[0.04] px-2 py-[2px] font-mono text-[8px] text-ink-dim">
+                  <span className="border border-white/10 bg-raised px-2 py-[2px] font-mono text-[8px] text-ink-dim">
                     TARGET: {recommendation.targetFacilityName || recommendation.targetRouteName}
                   </span>
 
@@ -105,7 +105,7 @@ export function RecommendationDetailModal({
           {/* Body Scrollable */}
           <div className="flex-1 overflow-y-auto p-5 space-y-5">
             {/* 1. WHY THIS INTERVENTION? REASONING CHAIN */}
-            <div className="border border-hair bg-white/[0.015] p-4">
+            <div className="border border-hair bg-raised p-4">
               <div className="flex items-center gap-1.5 pb-2.5 border-b border-hair/60">
                 <Sparkles size={12} className="text-signal" />
                 <h3 className="label-tech text-[8.5px] text-signal">
@@ -150,7 +150,7 @@ export function RecommendationDetailModal({
             {/* 2. CONFIDENCE & TRADE-OFFS (Two Columns) */}
             <div className="grid gap-4 md:grid-cols-2">
               {/* Confidence & Evidence */}
-              <div className="border border-hair bg-white/[0.015] p-4">
+              <div className="border border-hair bg-raised p-4">
                 <div className="flex items-center justify-between pb-2 border-b border-hair/60">
                   <div className="flex items-center gap-1.5">
                     <ShieldCheck size={12} className="text-signal" />
@@ -172,7 +172,7 @@ export function RecommendationDetailModal({
               </div>
 
               {/* Trade-Off Analysis */}
-              <div className="border border-hair bg-white/[0.015] p-4">
+              <div className="border border-hair bg-raised p-4">
                 <div className="flex items-center justify-between pb-2 border-b border-hair/60">
                   <div className="flex items-center gap-1.5">
                     <Scale size={12} className="text-warn" />
@@ -216,7 +216,7 @@ export function RecommendationDetailModal({
             </div>
 
             {/* 3. SIMULATED 10-METRIC IMPACT TABLE */}
-            <div className="border border-hair bg-white/[0.015] p-4">
+            <div className="border border-hair bg-raised p-4">
               <div className="flex items-center justify-between pb-2.5 border-b border-hair/60">
                 <div className="flex items-center gap-1.5">
                   <Activity size={12} className="text-signal" />
@@ -242,7 +242,7 @@ export function RecommendationDetailModal({
                   return (
                     <div
                       key={delta.label}
-                      className="border border-hair/40 bg-white/[0.01] p-2"
+                      className="border border-hair/40 bg-raised p-2"
                     >
                       <span className="label-tech block text-[7px] truncate text-ink-ghost">
                         {delta.label.toUpperCase()}
@@ -268,7 +268,7 @@ export function RecommendationDetailModal({
           </div>
 
           {/* Footer Actions */}
-          <footer className="flex flex-wrap items-center justify-between border-t border-hair px-5 py-3 bg-white/[0.02]">
+          <footer className="flex flex-wrap items-center justify-between border-t border-hair px-5 py-3 bg-raised">
             <div className="flex items-center gap-2">
               <Button
                 size="sm"
@@ -347,7 +347,7 @@ function ChainStep({
           : 'border-signal/50 text-signal'
 
   return (
-    <div className="border border-hair/60 bg-white/[0.01] p-2.5 flex flex-col justify-between">
+    <div className="border border-hair/60 bg-raised p-2.5 flex flex-col justify-between">
       <div>
         <div className="flex items-center justify-between pb-1 mb-1 border-b border-hair/40">
           <span className={cn('font-bold text-[7.5px] tracking-wider', borderTone)}>

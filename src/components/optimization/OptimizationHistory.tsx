@@ -33,7 +33,7 @@ export function OptimizationHistory({
           return (
             <div
               key={scen.scenarioId}
-              className="surface border border-hair/70 bg-white/[0.015] p-3 shadow-panel flex flex-col justify-between"
+              className="surface border border-hair/70 bg-raised p-3 shadow-panel flex flex-col justify-between"
             >
               <div>
                 <div className="flex items-center justify-between">

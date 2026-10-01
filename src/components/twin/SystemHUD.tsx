@@ -25,7 +25,7 @@ export function SystemHUD({ className }: { className?: string }) {
             {now.toISOString().slice(11, 19)} UTC
           </span>
         </header>
-        <div className="grid grid-cols-2 gap-px bg-white/[0.045] p-px">
+        <div className="grid grid-cols-2 gap-px bg-raised p-px">
           {model.metrics.map((metric) => (
             <MetricCard key={metric.id} metric={metric} className="border-0" />
           ))}

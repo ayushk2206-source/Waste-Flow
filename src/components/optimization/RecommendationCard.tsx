@@ -58,7 +58,7 @@ export function RecommendationCard({
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.35, delay: index * 0.05 }}
       className={cn(
-        'surface ticks group relative flex flex-col justify-between border border-hair bg-white/[0.015] p-4 shadow-panel transition-all hover:border-hair2 hover:bg-white/[0.03]',
+        'surface ticks group relative flex flex-col justify-between border border-hair bg-raised p-4 shadow-panel transition-all hover:border-hair2 hover:bg-raised',
         isCompared && 'border-signal/50 bg-signal/[0.02]',
         className,
       )}
@@ -76,7 +76,7 @@ export function RecommendationCard({
               {recommendation.category}
             </span>
 
-            <span className="border border-white/10 bg-white/[0.04] px-1.5 py-[2px] font-mono text-[7.5px] text-ink-dim">
+            <span className="border border-white/10 bg-raised px-1.5 py-[2px] font-mono text-[7.5px] text-ink-dim">
               {recommendation.targetFacilityName || recommendation.targetRouteName}
             </span>
 
@@ -114,7 +114,7 @@ export function RecommendationCard({
         </p>
 
         {/* Current vs Proposed Change Box */}
-        <div className="mt-3 border border-hair/70 bg-white/[0.01] p-2.5 font-mono text-[9px]">
+        <div className="mt-3 border border-hair/70 bg-raised p-2.5 font-mono text-[9px]">
           <div className="flex items-center justify-between text-ink-ghost">
             <span>BASELINE CONDITION</span>
             <span>PROPOSED INTERVENTION</span>
@@ -196,7 +196,7 @@ export function RecommendationCard({
               'focus-ring flex items-center gap-1 border px-2 py-1 font-mono text-[8px] tracking-wider transition-colors',
               isCompared
                 ? 'border-signal/60 bg-signal/15 text-signal font-semibold'
-                : 'border-hair bg-white/[0.02] text-ink-faint hover:text-ink',
+                : 'border-hair bg-raised text-ink-faint hover:text-ink',
             )}
             title="Add to side-by-side comparison"
           >
@@ -210,7 +210,7 @@ export function RecommendationCard({
               'focus-ring flex items-center gap-1 border px-2 py-1 font-mono text-[8px] tracking-wider transition-colors',
               isSaved
                 ? 'border-cyan-400/60 bg-cyan-400/15 text-cyan-400 font-semibold'
-                : 'border-hair bg-white/[0.02] text-ink-faint hover:text-ink',
+                : 'border-hair bg-raised text-ink-faint hover:text-ink',
             )}
             title="Save scenario snapshot for Phase 8"
           >
@@ -242,7 +242,7 @@ function ImpactMetric({
       : 'text-critical'
 
   return (
-    <div className="border border-hair/40 bg-white/[0.01] p-1.5 text-center">
+    <div className="border border-hair/40 bg-raised p-1.5 text-center">
       <span className="label-tech block text-[6.5px] truncate text-ink-ghost">{label}</span>
       <span className={cn('data-value mt-0.5 block text-[11px] font-semibold leading-none', toneClass)}>
         {pct > 0 ? '+' : ''}

@@ -38,7 +38,7 @@ export function ScenarioStoryModal({
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="fixed inset-0 z-50 grid place-items-center bg-void/85 p-4 backdrop-blur-[8px]"
+        className="fixed inset-0 z-50 grid place-items-center bg-void p-4 -[8px]"
         onClick={onClose}
       >
         <motion.article
@@ -93,7 +93,7 @@ export function ScenarioStoryModal({
                 {/* Key Metrics on Slide */}
                 <div className="mt-4 grid grid-cols-3 gap-2.5 pt-3 border-t border-hair/50 font-mono">
                   {slide.keyMetrics.map((km, i) => (
-                    <div key={i} className="border border-hair/50 bg-white/[0.015] p-2.5 text-center">
+                    <div key={i} className="border border-hair/50 bg-raised p-2.5 text-center">
                       <span className="label-tech block text-[7px] text-ink-ghost">{km.label}</span>
                       <span
                         className={cn(
@@ -134,7 +134,7 @@ export function ScenarioStoryModal({
                   onClick={() => setSlideIndex(i)}
                   className={cn(
                     'h-1.5 transition-all',
-                    i === slideIndex ? 'w-5 bg-signal' : 'w-1.5 bg-white/20 hover:bg-white/40',
+                    i === slideIndex ? 'w-5 bg-signal' : 'w-1.5 bg-raised hover:bg-raised',
                   )}
                   aria-label={`Go to slide ${i + 1}`}
                 />

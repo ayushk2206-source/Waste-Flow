@@ -28,7 +28,7 @@ export function StreamPreview({ className, delay = 0 }: { className?: string; de
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.9, delay, ease: [0.22, 1, 0.36, 1] }}
-      className={cn('border border-hair bg-white/[0.015] px-4 py-3.5 backdrop-blur-sm', className)}
+      className={cn('border border-hair bg-raised px-4 py-3.5 ', className)}
     >
       <header className="flex items-center gap-2 border-b border-hair pb-2">
         <span className="label-tech text-[8.5px]">SYSTEM MAP</span>
@@ -57,7 +57,7 @@ export function StreamPreview({ className, delay = 0 }: { className?: string; de
                 <span className="ml-auto data-value text-[11px] text-ink">{formatNumber(volume)}</span>
                 <span className="w-4 text-right font-mono text-[8.5px] text-ink-ghost">{nodes.length}</span>
               </div>
-              <div className="mt-1.5 h-[2px] w-full bg-white/[0.06]">
+              <div className="mt-1.5 h-[2px] w-full bg-raised">
                 <motion.span
                   initial={{ width: 0 }}
                   animate={{ width: `${Math.max(8, (volume / max) * 100)}%` }}

@@ -44,11 +44,11 @@ export const ScenarioDetailView: React.FC<ScenarioDetailViewProps> = ({
   return (
     <div className="space-y-8 animate-fade-in pb-16">
       {/* Top Navigation & Action Header */}
-      <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 p-5 rounded-2xl bg-white/[0.02] border border-white/10 backdrop-blur-md">
+      <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 p-5 rounded-2xl bg-raised border border-white/10 ">
         <div className="flex items-center gap-4">
           <button
             onClick={onBack}
-            className="flex items-center gap-2 px-3 py-2 rounded-xl bg-white/5 hover:bg-white/10 text-white/70 hover:text-white transition-colors border border-white/5 text-xs font-semibold cursor-pointer"
+            className="flex items-center gap-2 px-3 py-2 rounded-xl bg-raised hover:bg-raised text-white/70 hover:text-white transition-colors border border-white/5 text-xs font-semibold cursor-pointer"
           >
             <ArrowLeft size={16} />
             <span>Library</span>
@@ -72,7 +72,7 @@ export const ScenarioDetailView: React.FC<ScenarioDetailViewProps> = ({
           {/* Live Replay Button */}
           <button
             onClick={() => setShowReplayModal(true)}
-            className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-black text-xs font-bold shadow-lg shadow-emerald-500/20 transition-all cursor-pointer"
+            className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-signal hover:bg-signal-dim text-black text-xs font-bold transition-all cursor-pointer"
           >
             <Play size={14} className="fill-black" />
             <span>Replay Scenario</span>
@@ -81,7 +81,7 @@ export const ScenarioDetailView: React.FC<ScenarioDetailViewProps> = ({
           {/* Story Mode */}
           <button
             onClick={() => setShowStoryModal(true)}
-            className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white text-xs font-medium transition-colors cursor-pointer"
+            className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-raised hover:bg-raised border border-white/10 text-white text-xs font-medium transition-colors cursor-pointer"
           >
             <BookOpen size={14} className="text-purple-400" />
             <span>Story Mode</span>
@@ -90,7 +90,7 @@ export const ScenarioDetailView: React.FC<ScenarioDetailViewProps> = ({
           {/* Open in Simulation Lab */}
           <button
             onClick={() => onOpenInSimulation(scenario)}
-            className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white text-xs font-medium transition-colors cursor-pointer"
+            className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-raised hover:bg-raised border border-white/10 text-white text-xs font-medium transition-colors cursor-pointer"
           >
             <ExternalLink size={14} className="text-blue-400" />
             <span>Open in Simulation</span>
@@ -99,7 +99,7 @@ export const ScenarioDetailView: React.FC<ScenarioDetailViewProps> = ({
           {/* Duplicate */}
           <button
             onClick={() => onDuplicate(scenario)}
-            className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white/80 hover:text-white text-xs font-medium transition-colors cursor-pointer"
+            className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-raised hover:bg-raised border border-white/10 text-white/80 hover:text-white text-xs font-medium transition-colors cursor-pointer"
             title="Duplicate scenario"
           >
             <Copy size={14} />
@@ -109,7 +109,7 @@ export const ScenarioDetailView: React.FC<ScenarioDetailViewProps> = ({
           {/* Reset To Baseline */}
           <button
             onClick={onResetToBaseline}
-            className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white/60 hover:text-white text-xs font-medium transition-colors cursor-pointer"
+            className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-raised hover:bg-raised border border-white/10 text-white/60 hover:text-white text-xs font-medium transition-colors cursor-pointer"
             title="Clear simulation overrides on Digital Twin"
           >
             <RotateCcw size={14} />
@@ -141,7 +141,7 @@ export const ScenarioDetailView: React.FC<ScenarioDetailViewProps> = ({
           <div>
             <h3 className="text-base font-bold text-white tracking-tight flex items-center gap-2">
               <span>Digital Twin Dynamic Substrate</span>
-              <span className="text-[10px] px-2 py-0.5 rounded-full bg-white/10 text-white/70 font-mono">
+              <span className="text-[10px] px-2 py-0.5 rounded-full bg-raised text-white/70 font-mono">
                 CURRENT vs SCENARIO
               </span>
             </h3>

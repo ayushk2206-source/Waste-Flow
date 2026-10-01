@@ -30,7 +30,7 @@ export function SystemOptimizationSummary({
 
       <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-5">
         {/* System Health */}
-        <div className="surface border border-hair bg-white/[0.015] p-3 shadow-panel">
+        <div className="surface border border-hair bg-raised p-3 shadow-panel">
           <div className="flex items-center justify-between">
             <span className="label-tech text-[7px] text-ink-ghost">SYSTEM HEALTH</span>
             <Activity size={11} className="text-signal" />
@@ -50,7 +50,7 @@ export function SystemOptimizationSummary({
         </div>
 
         {/* Current Bottlenecks */}
-        <div className="surface border border-hair bg-white/[0.015] p-3 shadow-panel">
+        <div className="surface border border-hair bg-raised p-3 shadow-panel">
           <div className="flex items-center justify-between">
             <span className="label-tech text-[7px] text-ink-ghost">CURRENT BOTTLENECKS</span>
             <AlertTriangle size={11} className="text-critical" />
@@ -69,7 +69,7 @@ export function SystemOptimizationSummary({
         </div>
 
         {/* Optimization Opportunities */}
-        <div className="surface border border-hair bg-white/[0.015] p-3 shadow-panel">
+        <div className="surface border border-hair bg-raised p-3 shadow-panel">
           <div className="flex items-center justify-between">
             <span className="label-tech text-[7px] text-ink-ghost">OPTIMIZATION OPPORTUNITIES</span>
             <Sparkles size={11} className="text-cyan-400" />
@@ -86,7 +86,7 @@ export function SystemOptimizationSummary({
         </div>
 
         {/* Potential CO2 Reduction */}
-        <div className="surface border border-hair bg-white/[0.015] p-3 shadow-panel">
+        <div className="surface border border-hair bg-raised p-3 shadow-panel">
           <div className="flex items-center justify-between">
             <span className="label-tech text-[7px] text-ink-ghost">POTENTIAL CO₂ REDUCTION</span>
             <Leaf size={11} className="text-signal" />
@@ -103,7 +103,7 @@ export function SystemOptimizationSummary({
         </div>
 
         {/* Potential Landfill Diversion */}
-        <div className="surface border border-hair bg-white/[0.015] p-3 shadow-panel col-span-2 sm:col-span-1">
+        <div className="surface border border-hair bg-raised p-3 shadow-panel col-span-2 sm:col-span-1">
           <div className="flex items-center justify-between">
             <span className="label-tech text-[7px] text-ink-ghost">POTENTIAL LANDFILL DIVERSION</span>
             <TrendingDown size={11} className="text-signal" />

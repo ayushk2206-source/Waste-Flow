@@ -152,7 +152,7 @@ function Bar({ label, value, total, color }: { label: string; value: number; tot
           <span className="ml-1 text-ink-ghost">{pct.toFixed(1)}%</span>
         </span>
       </div>
-      <div className="mt-1 h-[3px] w-full bg-white/[0.055]">
+      <div className="mt-1 h-[3px] w-full bg-raised">
         <div
           className="h-full transition-[width] duration-700 ease-nexus"
           style={{ width: `${Math.min(100, pct)}%`, background: color, opacity: 0.8 }}

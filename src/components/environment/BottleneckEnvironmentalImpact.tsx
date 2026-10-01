@@ -27,7 +27,7 @@ export const BottleneckEnvironmentalImpact: React.FC<BottleneckEnvironmentalImpa
   }
 
   return (
-    <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/10 backdrop-blur-md shadow-xl space-y-4">
+    <div className="p-5 rounded-2xl bg-raised border border-white/10  shadow-xl space-y-4">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-white/5">
         <div>
           <div className="flex items-center gap-2">
@@ -46,7 +46,7 @@ export const BottleneckEnvironmentalImpact: React.FC<BottleneckEnvironmentalImpa
 
         <button
           onClick={() => setView('bottlenecks')}
-          className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 text-white text-xs font-medium transition-colors border border-white/10 cursor-pointer self-start sm:self-auto"
+          className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-raised hover:bg-raised text-white text-xs font-medium transition-colors border border-white/10 cursor-pointer self-start sm:self-auto"
         >
           <span>Open Bottleneck Engine</span>
           <ExternalLink size={12} className="text-white/60" />
@@ -91,7 +91,7 @@ export const BottleneckEnvironmentalImpact: React.FC<BottleneckEnvironmentalImpa
             </div>
 
             <div className="mt-4 pt-3 border-t border-white/5 grid grid-cols-3 gap-2 font-mono text-center">
-              <div className="p-1.5 rounded-lg bg-white/[0.02]">
+              <div className="p-1.5 rounded-lg bg-raised">
                 <span className="text-[9px] text-white/40 block">DELAYED</span>
                 <span className="text-xs font-bold text-white">{formatNumber(delayedT)} T</span>
               </div>

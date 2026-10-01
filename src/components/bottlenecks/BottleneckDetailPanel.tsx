@@ -96,7 +96,7 @@ export function BottleneckDetailPanel({
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.25 }}
-          className="absolute inset-0 z-40 grid place-items-center bg-void/65 p-3 backdrop-blur-[4px]"
+          className="absolute inset-0 z-40 grid place-items-center bg-void p-3 -[4px]"
           onClick={onClose}
         >
           <motion.article
@@ -131,7 +131,7 @@ export function BottleneckDetailPanel({
                     </span>
 
                     {/* Bottleneck Type Badge */}
-                    <span className="border border-white/10 bg-white/[0.04] px-1.5 py-[2px] font-mono text-[7.5px] tracking-[0.12em] text-ink-dim">
+                    <span className="border border-white/10 bg-raised px-1.5 py-[2px] font-mono text-[7.5px] tracking-[0.12em] text-ink-dim">
                       {bottleneck.bottleneckTypeLabel.toUpperCase()}
                     </span>
 
@@ -208,7 +208,7 @@ export function BottleneckDetailPanel({
                   {/* Left Column: Why & Root Cause Chain */}
                   <div className="space-y-4">
                     {/* Why is this happening */}
-                    <div className="border border-hair bg-white/[0.015] p-3.5">
+                    <div className="border border-hair bg-raised p-3.5">
                       <div className="flex items-center gap-1.5 pb-2">
                         <Activity size={12} className="text-signal" />
                         <h3 className="label-tech text-[8.5px]">WHY IS THIS HAPPENING?</h3>
@@ -223,7 +223,7 @@ export function BottleneckDetailPanel({
                     </div>
 
                     {/* Root Cause Chain */}
-                    <div className="border border-hair bg-white/[0.015] p-3.5">
+                    <div className="border border-hair bg-raised p-3.5">
                       <div className="flex items-center justify-between pb-2">
                         <h3 className="label-tech text-[8.5px]">DEPENDENCY CAUSE → EFFECT CASCADE</h3>
                         <ChainLegend />
@@ -237,7 +237,7 @@ export function BottleneckDetailPanel({
                   {/* Right Column: Evidence & Pressure Breakdown */}
                   <div className="space-y-4">
                     {/* Concrete Evidence */}
-                    <div className="border border-hair bg-white/[0.015] p-3.5">
+                    <div className="border border-hair bg-raised p-3.5">
                       <div className="flex items-center justify-between border-b border-hair pb-2">
                         <div className="flex items-center gap-1.5">
                           <CheckCircle2 size={12} className="text-signal" />
@@ -280,7 +280,7 @@ export function BottleneckDetailPanel({
                     </div>
 
                     {/* Pressure Score Components */}
-                    <div className="border border-hair bg-white/[0.015] p-3.5">
+                    <div className="border border-hair bg-raised p-3.5">
                       <div className="flex items-center justify-between border-b border-hair pb-2">
                         <h3 className="label-tech text-[8.5px]">PRESSURE SCORE BREAKDOWN ({bottleneck.pressure}/100)</h3>
                       </div>
@@ -374,7 +374,7 @@ export function BottleneckDetailPanel({
                   />
 
                   {/* Impact narrative */}
-                  <div className="border border-hair bg-white/[0.015] p-3.5">
+                  <div className="border border-hair bg-raised p-3.5">
                     <div className="flex items-center gap-1.5 pb-2">
                       <Leaf size={12} className="text-signal" />
                       <h4 className="label-tech text-[8.5px]">ENVIRONMENTAL ASSESSMENT SUMMARY</h4>
@@ -430,7 +430,7 @@ export function BottleneckDetailPanel({
                         initial={{ opacity: 0, y: 8 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.35, delay: i * 0.06 }}
-                        className="border border-hair bg-white/[0.015] p-3 transition-colors hover:bg-white/[0.035]"
+                        className="border border-hair bg-raised p-3 transition-colors hover:bg-raised"
                       >
                         <span className="font-mono text-[11px] font-medium tracking-[0.04em] text-ink">
                           {fix.label}
@@ -518,13 +518,13 @@ function TabButton({
         'focus-ring flex items-center gap-1.5 border px-2.5 py-1 font-mono text-[8.5px] tracking-[0.08em] transition-all',
         active
           ? 'border-signal/60 bg-signal/10 text-signal shadow-sm'
-          : 'border-hair bg-white/[0.01] text-ink-faint hover:border-hair2 hover:text-ink',
+          : 'border-hair bg-raised text-ink-faint hover:border-hair2 hover:text-ink',
       )}
     >
       <span>{icon}</span>
       <span>{label}</span>
       {count !== undefined && (
-        <span className="rounded bg-white/[0.08] px-1 py-[0.5px] text-[7.5px] text-ink-dim">
+        <span className="rounded bg-raised px-1 py-[0.5px] text-[7.5px] text-ink-dim">
           {count}
         </span>
       )}
@@ -551,7 +551,7 @@ function EvidenceRow({
           : 'text-ink'
 
   return (
-    <div className="border border-hair/50 bg-white/[0.01] p-2">
+    <div className="border border-hair/50 bg-raised p-2">
       <span className="label-tech block text-[7px] text-ink-ghost">{label}</span>
       <span className={cn('data-value mt-0.5 block text-[11px] leading-none', toneClass)}>
         {value}
@@ -575,7 +575,7 @@ function PressureBar({
         <span className="text-ink-faint">{label}</span>
         <span className="data-value text-[9.5px] text-ink">{value} / 100</span>
       </div>
-      <div className="mt-1 h-1 w-full bg-white/[0.05]">
+      <div className="mt-1 h-1 w-full bg-raised">
         <div className="h-full" style={{ width: `${Math.min(100, value)}%`, background: color }} />
       </div>
     </div>

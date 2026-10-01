@@ -45,7 +45,7 @@ export function MetricCard({ metric, className, compact = false }: MetricCardPro
   return (
     <div
       className={cn(
-        'group/metric relative overflow-hidden border border-hair bg-white/[0.018] px-3 py-2 transition-colors duration-300 ease-nexus hover:border-hair2 hover:bg-white/[0.035]',
+        'group/metric relative overflow-hidden border border-hair bg-raised px-3 py-2 transition-colors duration-300 ease-nexus hover:border-hair2 hover:bg-raised',
         className,
       )}
       title={metric.hint}

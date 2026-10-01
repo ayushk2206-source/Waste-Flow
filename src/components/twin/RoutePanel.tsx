@@ -302,7 +302,7 @@ const RouteBody = forwardRef<HTMLDivElement, RouteBodyProps>(function RouteBody(
                 initial={{ height: 2, opacity: 0 }}
                 animate={{ height: `${Math.max(6, (v / maxSeries) * 100)}%`, opacity: 1 }}
                 transition={{ duration: 0.4, delay: 0.02 * i, ease: [0.22, 1, 0.36, 1] }}
-                className={cn('flex-1', i === series.length - 1 ? 'bg-flow/80' : 'bg-white/[0.13] hover:bg-white/25')}
+                className={cn('flex-1', i === series.length - 1 ? 'bg-flow/80' : 'bg-raised hover:bg-raised')}
               />
             ))}
           </div>

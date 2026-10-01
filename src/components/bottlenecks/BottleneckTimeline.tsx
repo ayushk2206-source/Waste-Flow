@@ -28,7 +28,7 @@ export function BottleneckTimeline({
         </span>
       </div>
 
-      <div className="relative border border-hair bg-white/[0.015] p-3.5">
+      <div className="relative border border-hair bg-raised p-3.5">
         <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-6">
           {timeline.map((point, idx) => {
             const isReached = point.reached
@@ -55,8 +55,8 @@ export function BottleneckTimeline({
                   isActive
                     ? 'border-signal/60 bg-signal/[0.05] ring-1 ring-signal/30'
                     : isReached
-                      ? 'border-hair bg-white/[0.01]'
-                      : 'border-hair/40 bg-white/[0.005] opacity-50',
+                      ? 'border-hair bg-raised'
+                      : 'border-hair/40 bg-raised opacity-50',
                 )}
               >
                 <div>

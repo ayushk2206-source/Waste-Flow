@@ -28,7 +28,7 @@ export const DataTransparencySection: React.FC = () => {
   ]
 
   return (
-    <div className="rounded-2xl border border-white/5 bg-white/[0.01] p-4 backdrop-blur-sm">
+    <div className="rounded-2xl border border-white/5 bg-raised p-4 ">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="w-full flex items-center justify-between text-left text-xs font-mono text-white/50 hover:text-white/80 transition-colors cursor-pointer"
@@ -48,7 +48,7 @@ export const DataTransparencySection: React.FC = () => {
       {isOpen && (
         <div className="mt-4 pt-3 border-t border-white/5 grid grid-cols-1 md:grid-cols-2 gap-3 text-xs animate-fade-in">
           {methodologies.map((m, i) => (
-            <div key={i} className="p-3 rounded-xl bg-white/[0.015] border border-white/5 space-y-1.5 font-mono">
+            <div key={i} className="p-3 rounded-xl bg-raised border border-white/5 space-y-1.5 font-mono">
               <span className="text-[10px] text-emerald-400 font-bold block">{m.title}</span>
               <div className="p-1.5 rounded bg-black/40 border border-white/5 text-[10px] text-white/90">
                 <code>{m.formula}</code>

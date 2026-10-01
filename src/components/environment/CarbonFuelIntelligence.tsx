@@ -62,7 +62,7 @@ export const CarbonFuelIntelligence: React.FC<CarbonFuelIntelligenceProps> = ({ 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
       {/* 7. CO₂e INTELLIGENCE PANEL */}
-      <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/10 backdrop-blur-md shadow-xl flex flex-col justify-between space-y-4">
+      <div className="p-5 rounded-2xl bg-raised border border-white/10  shadow-xl flex flex-col justify-between space-y-4">
         <div>
           <div className="flex items-center justify-between pb-3 border-b border-white/5">
             <div className="flex items-center gap-2">
@@ -86,7 +86,7 @@ export const CarbonFuelIntelligence: React.FC<CarbonFuelIntelligenceProps> = ({ 
               <span>Emissions Proportion</span>
               <span>100% Total Impact</span>
             </div>
-            <div className="w-full h-3 rounded-full bg-white/5 overflow-hidden flex">
+            <div className="w-full h-3 rounded-full bg-raised overflow-hidden flex">
               <div className="h-full bg-amber-400" style={{ width: `${(summary.transportCo2eKg / summary.totalCo2eKg) * 100}%` }} title="Transport" />
               <div className="h-full bg-teal-400" style={{ width: `${(summary.facilityCo2eKg / summary.totalCo2eKg) * 100}%` }} title="Facility" />
             </div>
@@ -95,13 +95,13 @@ export const CarbonFuelIntelligence: React.FC<CarbonFuelIntelligenceProps> = ({ 
           {/* Detailed Sources List */}
           <div className="space-y-2.5 mt-4">
             {co2Sources.map((s, idx) => (
-              <div key={idx} className="p-3 rounded-xl bg-white/[0.015] border border-white/5 flex items-center justify-between">
+              <div key={idx} className="p-3 rounded-xl bg-raised border border-white/5 flex items-center justify-between">
                 <div>
                   <div className="flex items-center gap-2">
                     <span className={`w-2 h-2 rounded-full ${s.color}`} />
                     <span className="text-xs font-mono font-semibold text-white uppercase">{s.label}</span>
                     {s.isEstimated && (
-                      <span className="text-[8.5px] px-1.5 py-0.5 rounded bg-white/5 text-white/40 font-mono">
+                      <span className="text-[8.5px] px-1.5 py-0.5 rounded bg-raised text-white/40 font-mono">
                         ESTIMATED
                       </span>
                     )}
@@ -128,7 +128,7 @@ export const CarbonFuelIntelligence: React.FC<CarbonFuelIntelligenceProps> = ({ 
       </div>
 
       {/* 8. FUEL INTELLIGENCE PANEL */}
-      <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/10 backdrop-blur-md shadow-xl flex flex-col justify-between space-y-4">
+      <div className="p-5 rounded-2xl bg-raised border border-white/10  shadow-xl flex flex-col justify-between space-y-4">
         <div>
           <div className="flex items-center justify-between pb-3 border-b border-white/5">
             <div className="flex items-center gap-2">
@@ -152,17 +152,17 @@ export const CarbonFuelIntelligence: React.FC<CarbonFuelIntelligenceProps> = ({ 
               LOGISTICS CAUSAL CASCADE
             </span>
             <div className="flex items-center justify-between font-mono text-xs text-white/80 py-1">
-              <div className="flex items-center gap-1.5 p-2 rounded-lg bg-white/5 border border-white/5">
+              <div className="flex items-center gap-1.5 p-2 rounded-lg bg-raised border border-white/5">
                 <span className="text-amber-400">DETOUR DISTANCE ↑</span>
                 <span className="text-[10px] text-white/40">RT-06</span>
               </div>
               <ArrowRight size={14} className="text-cyan-400 shrink-0" />
-              <div className="flex items-center gap-1.5 p-2 rounded-lg bg-white/5 border border-white/5">
+              <div className="flex items-center gap-1.5 p-2 rounded-lg bg-raised border border-white/5">
                 <span className="text-cyan-400">FUEL BURN ↑</span>
                 <span className="text-[10px] text-white/40">+18%</span>
               </div>
               <ArrowRight size={14} className="text-cyan-400 shrink-0" />
-              <div className="flex items-center gap-1.5 p-2 rounded-lg bg-white/5 border border-white/5">
+              <div className="flex items-center gap-1.5 p-2 rounded-lg bg-raised border border-white/5">
                 <span className="text-red-400">CO₂e ↑</span>
                 <span className="text-[10px] text-white/40">+840 kg</span>
               </div>
@@ -175,7 +175,7 @@ export const CarbonFuelIntelligence: React.FC<CarbonFuelIntelligenceProps> = ({ 
           {/* Fuel Metrics Grid */}
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 mt-4">
             {fuelBreakdown.map((f, i) => (
-              <div key={i} className="p-3 rounded-xl bg-white/[0.015] border border-white/5">
+              <div key={i} className="p-3 rounded-xl bg-raised border border-white/5">
                 <span className="text-[9.5px] font-mono uppercase text-white/40 block truncate">{f.label}</span>
                 <span className="text-base font-bold text-white font-mono block mt-1">{f.val}</span>
                 <span className="text-[9.5px] text-white/40 mt-1 block truncate" title={f.sub}>{f.sub}</span>

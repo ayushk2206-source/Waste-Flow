@@ -128,7 +128,7 @@ export const EnvironmentalDashboard: React.FC = () => {
   return (
     <div className="w-full max-w-7xl mx-auto space-y-7 animate-fade-in font-sans pb-16">
       {/* 1. Header Toolbar */}
-      <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 p-5 rounded-2xl bg-white/[0.02] border border-white/10 backdrop-blur-md">
+      <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 p-5 rounded-2xl bg-raised border border-white/10 ">
         <div>
           <div className="flex items-center gap-2.5">
             <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
@@ -146,7 +146,7 @@ export const EnvironmentalDashboard: React.FC = () => {
           {/* Story Mode */}
           <button
             onClick={() => setShowStoryModal(true)}
-            className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white text-xs font-medium transition-colors cursor-pointer"
+            className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-raised hover:bg-raised border border-white/10 text-white text-xs font-medium transition-colors cursor-pointer"
           >
             <Presentation size={14} className="text-emerald-400" />
             <span>Story Mode</span>
@@ -158,7 +158,7 @@ export const EnvironmentalDashboard: React.FC = () => {
             className={`flex items-center gap-1.5 px-3.5 py-2 rounded-xl border text-xs font-mono font-semibold transition-all cursor-pointer ${
               isScenarioOverlayActive
                 ? 'bg-purple-500 text-black border-purple-400 shadow-lg shadow-purple-500/20'
-                : 'bg-white/5 hover:bg-white/10 text-white/70 hover:text-white border-white/10'
+                : 'bg-raised hover:bg-raised text-white/70 hover:text-white border-white/10'
             }`}
           >
             <GitBranch size={13} />
@@ -168,7 +168,7 @@ export const EnvironmentalDashboard: React.FC = () => {
           {/* Inspect on Digital Twin */}
           <button
             onClick={() => setView('twin')}
-            className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white/70 hover:text-white text-xs font-medium transition-colors cursor-pointer"
+            className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-raised hover:bg-raised border border-white/10 text-white/70 hover:text-white text-xs font-medium transition-colors cursor-pointer"
           >
             <MapPin size={13} className="text-teal-400" />
             <span>Digital Twin</span>
@@ -177,7 +177,7 @@ export const EnvironmentalDashboard: React.FC = () => {
           {/* Reset Baseline */}
           <button
             onClick={handleResetToBaseline}
-            className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white/50 hover:text-white text-xs font-medium transition-colors cursor-pointer"
+            className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-raised hover:bg-raised border border-white/10 text-white/50 hover:text-white text-xs font-medium transition-colors cursor-pointer"
             title="Reset to live baseline state"
           >
             <RotateCcw size={13} />

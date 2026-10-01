@@ -46,7 +46,7 @@ export function NodeTooltip() {
           style={{ left, top, width }}
           className="pointer-events-none absolute z-30"
         >
-          <div className="surface border-hair bg-panel/95 px-3 py-2 shadow-panel">
+          <div className="surface border-hair bg-panel px-3 py-2 shadow-panel">
             <div className="flex items-center gap-2">
               <span className="h-1.5 w-1.5" style={{ background: color }} />
               <span className="truncate font-mono text-[10.5px] uppercase tracking-[0.12em] text-ink">

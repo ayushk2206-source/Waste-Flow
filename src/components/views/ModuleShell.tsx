@@ -26,7 +26,7 @@ export function ModuleShell({ icon: Icon, title, code, description, phase, child
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 10 }}
       transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
-      className="absolute inset-0 z-30 flex flex-col bg-void/78 backdrop-blur-md"
+      className="absolute inset-0 z-30 flex flex-col bg-void "
     >
       <header className="flex shrink-0 items-start gap-3 border-b border-hair px-5 py-3.5">
         <span className="mt-0.5 grid h-7 w-7 place-items-center border border-hair text-signal/85">
@@ -81,7 +81,7 @@ export function ModuleCard({
           ? 'text-critical'
           : 'text-ink'
   return (
-    <div className="border border-hair bg-white/[0.015] px-3 py-2.5">
+    <div className="border border-hair bg-raised px-3 py-2.5">
       <span className="label-tech text-[8.5px]">{label}</span>
       <div className="mt-1.5 flex items-baseline gap-1">
         <span className={`data-value text-[19px] leading-none ${toneClass}`}>{value}</span>

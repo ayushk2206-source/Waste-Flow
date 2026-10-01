@@ -15,7 +15,7 @@ export const RecoveryPanel: React.FC<RecoveryPanelProps> = ({ summary }) => {
   const recoveryCapacity = summary.recoveryCapacityT
 
   return (
-    <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/10 backdrop-blur-md shadow-xl flex flex-col justify-between space-y-4">
+    <div className="p-5 rounded-2xl bg-raised border border-white/10  shadow-xl flex flex-col justify-between space-y-4">
       {/* Header */}
       <div>
         <div className="flex items-center justify-between pb-3 border-b border-white/5">
@@ -35,7 +35,7 @@ export const RecoveryPanel: React.FC<RecoveryPanelProps> = ({ summary }) => {
 
         {/* Big Numbers Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-4">
-          <div className="p-3 rounded-xl bg-white/[0.02] border border-white/5">
+          <div className="p-3 rounded-xl bg-raised border border-white/5">
             <span className="text-[10px] font-mono uppercase text-white/40 block">CURRENT RECOVERY</span>
             <div className="flex items-baseline gap-1 mt-1 font-mono">
               <span className="text-xl font-bold text-emerald-400">{formatNumber(currentRecovery)}</span>
@@ -44,7 +44,7 @@ export const RecoveryPanel: React.FC<RecoveryPanelProps> = ({ summary }) => {
             <span className="text-[10px] text-emerald-400/80 mt-1 block">Active diversion</span>
           </div>
 
-          <div className="p-3 rounded-xl bg-white/[0.02] border border-white/5">
+          <div className="p-3 rounded-xl bg-raised border border-white/5">
             <span className="text-[10px] font-mono uppercase text-white/40 block">POTENTIAL CEILING</span>
             <div className="flex items-baseline gap-1 mt-1 font-mono">
               <span className="text-xl font-bold text-white">{formatNumber(potentialRecovery)}</span>
@@ -62,7 +62,7 @@ export const RecoveryPanel: React.FC<RecoveryPanelProps> = ({ summary }) => {
             <span className="text-[10px] text-amber-300/80 mt-1 block">Unrecovered dry recyclates</span>
           </div>
 
-          <div className="p-3 rounded-xl bg-white/[0.02] border border-white/5">
+          <div className="p-3 rounded-xl bg-raised border border-white/5">
             <span className="text-[10px] font-mono uppercase text-white/40 block">INSTALLED CAPACITY</span>
             <div className="flex items-baseline gap-1 mt-1 font-mono">
               <span className="text-xl font-bold text-white">{formatNumber(recoveryCapacity)}</span>
@@ -73,14 +73,14 @@ export const RecoveryPanel: React.FC<RecoveryPanelProps> = ({ summary }) => {
         </div>
 
         {/* Visual Progress Bar to Potential */}
-        <div className="mt-4 p-3 rounded-xl bg-white/[0.015] border border-white/5 space-y-2">
+        <div className="mt-4 p-3 rounded-xl bg-raised border border-white/5 space-y-2">
           <div className="flex items-center justify-between text-xs font-mono">
             <span className="text-white/60">Recovery Capture vs Potential</span>
             <span className="text-emerald-400 font-semibold">
               {potentialRecovery > 0 ? ((currentRecovery / potentialRecovery) * 100).toFixed(1) : 0}% Realized
             </span>
           </div>
-          <div className="w-full h-2.5 rounded-full bg-white/5 overflow-hidden flex">
+          <div className="w-full h-2.5 rounded-full bg-raised overflow-hidden flex">
             <div
               className="h-full bg-emerald-400 rounded-l-full transition-all duration-500"
               style={{
@@ -108,7 +108,7 @@ export const RecoveryPanel: React.FC<RecoveryPanelProps> = ({ summary }) => {
       </div>
 
       {/* Explanatory Root Cause Gap Notes */}
-      <div className="p-3 rounded-xl bg-white/[0.01] border border-white/5 text-xs text-white/60 space-y-1.5">
+      <div className="p-3 rounded-xl bg-raised border border-white/5 text-xs text-white/60 space-y-1.5">
         <div className="flex items-center gap-1.5 font-mono text-[10px] text-amber-400 uppercase tracking-wider font-semibold">
           <AlertCircle size={12} />
           <span>Why does the {recoveryGap} T/day Recovery Gap exist?</span>

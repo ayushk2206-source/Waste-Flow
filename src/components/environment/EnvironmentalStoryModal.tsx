@@ -33,7 +33,7 @@ export const EnvironmentalStoryModal: React.FC<EnvironmentalStoryModalProps> = (
             Greater Mumbai generates over <strong>{formatNumber(summary.totalGeneratedT)} tonnes</strong> of municipal solid waste daily across its 8 ward zones. Although {formatNumber(summary.totalCollectedT)} tonnes are collected, critical structural friction limits material circularity.
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 font-mono">
-            <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/10">
+            <div className="p-3.5 rounded-xl bg-raised border border-white/10">
               <span className="text-[10px] text-white/40 block">GENERATED</span>
               <span className="text-xl font-bold text-white mt-1 block">{formatNumber(summary.totalGeneratedT)} T</span>
             </div>
@@ -95,17 +95,17 @@ export const EnvironmentalStoryModal: React.FC<EnvironmentalStoryModalProps> = (
             The Digital Twin recalculated mass velocity across all 14 facilities and 20 transport links without delay:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 font-mono text-center">
-            <div className="p-4 rounded-xl bg-white/[0.02] border border-white/10">
+            <div className="p-4 rounded-xl bg-raised border border-white/10">
               <span className="text-[10px] text-white/40 block">QUEUE DELAYS</span>
               <span className="text-xl font-bold text-emerald-400 mt-1 block">45m → 0m</span>
               <span className="text-[10px] text-white/40 mt-1 block">Gate backlog eliminated</span>
             </div>
-            <div className="p-4 rounded-xl bg-white/[0.02] border border-white/10">
+            <div className="p-4 rounded-xl bg-raised border border-white/10">
               <span className="text-[10px] text-white/40 block">DETOUR MILEAGE</span>
               <span className="text-xl font-bold text-teal-400 mt-1 block">-1,200 km</span>
               <span className="text-[10px] text-white/40 mt-1 block">Direct corridor transit</span>
             </div>
-            <div className="p-4 rounded-xl bg-white/[0.02] border border-white/10">
+            <div className="p-4 rounded-xl bg-raised border border-white/10">
               <span className="text-[10px] text-white/40 block">SORTING INTAKE</span>
               <span className="text-xl font-bold text-purple-300 mt-1 block">100% Buffered</span>
               <span className="text-[10px] text-white/40 mt-1 block">Zero uncontained spill</span>
@@ -156,10 +156,10 @@ export const EnvironmentalStoryModal: React.FC<EnvironmentalStoryModalProps> = (
   const active = slides[currentSlide]
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-fade-in">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85  animate-fade-in">
       <div className="bg-[#0b0f17] border border-white/10 rounded-2xl w-full max-w-3xl flex flex-col shadow-2xl overflow-hidden">
         {/* Header */}
-        <div className="flex items-center justify-between px-6 py-5 border-b border-white/10 bg-white/[0.02]">
+        <div className="flex items-center justify-between px-6 py-5 border-b border-white/10 bg-raised">
           <div className="flex items-center gap-2.5">
             <div className="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
               <Presentation size={16} />
@@ -167,7 +167,7 @@ export const EnvironmentalStoryModal: React.FC<EnvironmentalStoryModalProps> = (
             <div>
               <div className="flex items-center gap-2">
                 <h3 className="text-base font-bold text-white">Environmental Story Mode</h3>
-                <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-white/10 text-white/70">
+                <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-raised text-white/70">
                   {active.stage} OF {slides.length}
                 </span>
               </div>
@@ -177,7 +177,7 @@ export const EnvironmentalStoryModal: React.FC<EnvironmentalStoryModalProps> = (
 
           <button
             onClick={onClose}
-            className="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-white/60 hover:text-white transition-colors cursor-pointer"
+            className="p-2 rounded-lg bg-raised hover:bg-raised text-white/60 hover:text-white transition-colors cursor-pointer"
           >
             <X size={18} />
           </button>
@@ -197,14 +197,14 @@ export const EnvironmentalStoryModal: React.FC<EnvironmentalStoryModalProps> = (
         </div>
 
         {/* Footer Navigation */}
-        <div className="flex items-center justify-between px-6 py-4 border-t border-white/10 bg-white/[0.01]">
+        <div className="flex items-center justify-between px-6 py-4 border-t border-white/10 bg-raised">
           <div className="flex items-center gap-1.5">
             {slides.map((_, i) => (
               <button
                 key={i}
                 onClick={() => setCurrentSlide(i)}
                 className={`w-2 h-2 rounded-full transition-all cursor-pointer ${
-                  currentSlide === i ? 'bg-emerald-400 w-5' : 'bg-white/20 hover:bg-white/40'
+                  currentSlide === i ? 'bg-emerald-400 w-5' : 'bg-raised hover:bg-raised'
                 }`}
               />
             ))}
@@ -214,7 +214,7 @@ export const EnvironmentalStoryModal: React.FC<EnvironmentalStoryModalProps> = (
             <button
               onClick={() => setCurrentSlide((prev) => Math.max(0, prev - 1))}
               disabled={currentSlide === 0}
-              className="px-3 py-1.5 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 text-white text-xs font-mono disabled:opacity-30 disabled:cursor-not-allowed transition-all flex items-center gap-1 cursor-pointer"
+              className="px-3 py-1.5 rounded-xl border border-white/10 bg-raised hover:bg-raised text-white text-xs font-mono disabled:opacity-30 disabled:cursor-not-allowed transition-all flex items-center gap-1 cursor-pointer"
             >
               <ChevronLeft size={14} />
               <span>Previous</span>

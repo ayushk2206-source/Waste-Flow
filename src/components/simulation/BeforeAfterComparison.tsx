@@ -20,10 +20,10 @@ export function BeforeAfterComparison({
         </span>
       </div>
 
-      <div className="overflow-x-auto border border-hair bg-white/[0.01]">
+      <div className="overflow-x-auto border border-hair bg-raised">
         <table className="w-full text-left font-mono text-[9px]">
           <thead>
-            <tr className="border-b border-hair bg-white/[0.02] text-ink-ghost">
+            <tr className="border-b border-hair bg-raised text-ink-ghost">
               <th className="p-2.5 font-normal">OPERATIONAL METRIC</th>
               <th className="p-2.5 font-normal text-right">BASELINE (CURRENT)</th>
               <th className="p-2.5 font-normal text-center">→</th>
@@ -38,7 +38,7 @@ export function BeforeAfterComparison({
               const deltaColor = isZero ? 'text-ink-dim' : isGood ? 'text-signal' : 'text-critical'
 
               return (
-                <tr key={d.label} className="transition-colors hover:bg-white/[0.02]">
+                <tr key={d.label} className="transition-colors hover:bg-raised">
                   <td className="p-2.5 font-medium text-ink">{d.label}</td>
                   <td className="p-2.5 text-right text-ink-faint">
                     {formatNumber(d.baselineValue)} {d.unit}

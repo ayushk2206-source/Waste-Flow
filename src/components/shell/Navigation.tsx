@@ -54,7 +54,7 @@ export function Navigation() {
                 aria-label={label}
                 className={cn(
                   'focus-ring group relative grid h-9 w-9 place-items-center transition-colors duration-200 ease-nexus',
-                  active ? 'bg-signal/[0.1] text-signal' : 'text-ink-faint hover:bg-white/[0.05] hover:text-ink',
+                  active ? 'bg-signal/[0.1] text-signal' : 'text-ink-faint hover:bg-raised hover:text-ink',
                 )}
               >
                 <span

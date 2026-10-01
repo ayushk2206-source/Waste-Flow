@@ -16,7 +16,7 @@ export function BottomStatusBar() {
   const activeLayers = LAYER_ORDER.filter((l) => layers[l])
 
   return (
-    <footer className="relative z-40 flex h-6 shrink-0 items-center gap-3 border-t border-hair bg-base/90 px-3 font-mono text-[8.5px] tracking-[0.1em] text-ink-ghost backdrop-blur-xl">
+    <footer className="relative z-40 flex h-6 shrink-0 items-center gap-3 border-t border-hair bg-base/90 px-3 font-mono text-[8.5px] tracking-[0.1em] text-ink-ghost ">
       <span className="text-ink-faint">WASTEFLOW NEXUS</span>
       <span className="hidden sm:inline">TWIN v0.1 · MOCK TELEMETRY</span>
       <span className="mx-0.5 hidden h-3 w-px bg-hair sm:block" />

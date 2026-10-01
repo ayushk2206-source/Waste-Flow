@@ -20,7 +20,7 @@ export function EnvironmentalImpactPanel({
   return (
     <div
       className={cn(
-        'surface ticks border border-hair bg-white/[0.015] p-4 shadow-panel',
+        'surface ticks border border-hair bg-raised p-4 shadow-panel',
         className,
       )}
     >

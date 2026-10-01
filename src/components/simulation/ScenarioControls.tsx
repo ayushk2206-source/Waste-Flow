@@ -312,10 +312,10 @@ function ControlSection({
   children: React.ReactNode
 }) {
   return (
-    <div className="border border-hair bg-white/[0.01]">
+    <div className="border border-hair bg-raised">
       <button
         onClick={onToggle}
-        className="flex w-full items-center justify-between p-2.5 text-left transition-colors hover:bg-white/[0.03]"
+        className="flex w-full items-center justify-between p-2.5 text-left transition-colors hover:bg-raised"
       >
         <div className="flex items-center gap-2">
           <span>{icon}</span>
@@ -325,7 +325,7 @@ function ControlSection({
         </div>
         <div className="flex items-center gap-2">
           {badge && (
-            <span className="border border-white/10 bg-white/[0.04] px-1.5 py-[1px] font-mono text-[7px] text-ink-ghost">
+            <span className="border border-white/10 bg-raised px-1.5 py-[1px] font-mono text-[7px] text-ink-ghost">
               {badge}
             </span>
           )}
@@ -376,7 +376,7 @@ function SliderControl({
           step={step}
           value={value}
           onChange={(e) => onChange(parseFloat(e.target.value))}
-          className="h-1 flex-1 cursor-pointer appearance-none bg-white/[0.1] accent-signal focus:outline-none"
+          className="h-1 flex-1 cursor-pointer appearance-none bg-raised accent-signal focus:outline-none"
         />
         <span className="w-10 text-right font-mono text-[8px] text-ink-ghost">
           {value}
@@ -404,7 +404,7 @@ function ToggleControl({
   onChange: (checked: boolean) => void
 }) {
   return (
-    <div className="flex items-start justify-between gap-3 border border-hair/50 bg-white/[0.005] p-2">
+    <div className="flex items-start justify-between gap-3 border border-hair/50 bg-raised p-2">
       <div>
         <span className="font-mono text-[9px] font-medium text-ink">{label}</span>
         <p className="mt-0.5 text-[8px] leading-relaxed text-ink-faint">{description}</p>
@@ -413,7 +413,7 @@ function ToggleControl({
         onClick={() => onChange(!checked)}
         className={cn(
           'relative inline-flex h-4 w-8 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none',
-          checked ? 'bg-signal' : 'bg-white/15',
+          checked ? 'bg-signal' : 'bg-raised',
         )}
       >
         <span

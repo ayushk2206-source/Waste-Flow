@@ -30,10 +30,10 @@ export const MultiScenarioComparisonModal: React.FC<MultiScenarioComparisonModal
   ];
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8 bg-black/80 backdrop-blur-md animate-fade-in overflow-y-auto">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8 bg-black/80  animate-fade-in overflow-y-auto">
       <div className="bg-[#0b0f17] border border-white/10 rounded-2xl w-full max-w-6xl max-h-[92vh] flex flex-col shadow-2xl overflow-hidden">
         {/* Header */}
-        <div className="flex items-center justify-between px-6 py-5 border-b border-white/10 bg-white/[0.02]">
+        <div className="flex items-center justify-between px-6 py-5 border-b border-white/10 bg-raised">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400">
               <Scale size={20} />
@@ -41,7 +41,7 @@ export const MultiScenarioComparisonModal: React.FC<MultiScenarioComparisonModal
             <div>
               <div className="flex items-center gap-2">
                 <h2 className="text-xl font-bold text-white tracking-tight">Multi-Scenario Matrix Comparison</h2>
-                <span className="text-[11px] px-2 py-0.5 rounded-full bg-white/10 text-white/70 font-mono">
+                <span className="text-[11px] px-2 py-0.5 rounded-full bg-raised text-white/70 font-mono">
                   {scenarios.length} SCENARIOS SELECTED
                 </span>
               </div>
@@ -52,7 +52,7 @@ export const MultiScenarioComparisonModal: React.FC<MultiScenarioComparisonModal
           </div>
           <button
             onClick={onClose}
-            className="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-white/60 hover:text-white transition-colors cursor-pointer"
+            className="p-2 rounded-lg bg-raised hover:bg-raised text-white/60 hover:text-white transition-colors cursor-pointer"
           >
             <X size={18} />
           </button>
@@ -63,7 +63,7 @@ export const MultiScenarioComparisonModal: React.FC<MultiScenarioComparisonModal
           {/* Scenario Overview Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             {/* Baseline Column Header */}
-            <div className="p-4 rounded-xl bg-white/[0.03] border border-white/10 flex flex-col justify-between">
+            <div className="p-4 rounded-xl bg-raised border border-white/10 flex flex-col justify-between">
               <div>
                 <span className="text-[10px] font-mono tracking-wider text-white/40 uppercase block mb-1">
                   Reference Baseline
@@ -92,7 +92,7 @@ export const MultiScenarioComparisonModal: React.FC<MultiScenarioComparisonModal
                     </span>
                   </div>
                   <h3 className="text-sm font-bold text-white line-clamp-1">{sc.scenarioName}</h3>
-                  <div className="mt-2 text-xs text-white/60 bg-white/5 p-2 rounded-lg line-clamp-2">
+                  <div className="mt-2 text-xs text-white/60 bg-raised p-2 rounded-lg line-clamp-2">
                     {sc.changedVariables.map((cv) => `${cv.name}: ${cv.simulated}`).join(' • ')}
                   </div>
                 </div>
@@ -106,7 +106,7 @@ export const MultiScenarioComparisonModal: React.FC<MultiScenarioComparisonModal
                       onSelectScenario(sc);
                       onClose();
                     }}
-                    className="text-xs px-2.5 py-1 rounded bg-white/10 hover:bg-white/20 text-white font-medium transition-colors cursor-pointer"
+                    className="text-xs px-2.5 py-1 rounded bg-raised hover:bg-raised text-white font-medium transition-colors cursor-pointer"
                   >
                     View Detail
                   </button>
@@ -117,7 +117,7 @@ export const MultiScenarioComparisonModal: React.FC<MultiScenarioComparisonModal
 
           {/* Matrix Comparison Table */}
           <div className="rounded-xl border border-white/10 overflow-hidden bg-black/40">
-            <div className="px-4 py-3 bg-white/[0.02] border-b border-white/10 flex items-center justify-between">
+            <div className="px-4 py-3 bg-raised border-b border-white/10 flex items-center justify-between">
               <span className="text-xs font-mono tracking-wider uppercase text-white/50">
                 Performance Divergence Matrix
               </span>
@@ -129,7 +129,7 @@ export const MultiScenarioComparisonModal: React.FC<MultiScenarioComparisonModal
             <div className="overflow-x-auto">
               <table className="w-full text-left text-xs">
                 <thead>
-                  <tr className="border-b border-white/10 bg-white/[0.01] text-white/50 font-mono">
+                  <tr className="border-b border-white/10 bg-raised text-white/50 font-mono">
                     <th className="py-3 px-4 font-normal">Metric Parameter</th>
                     <th className="py-3 px-4 font-normal">Current System</th>
                     {scenarios.map((sc) => (
@@ -141,7 +141,7 @@ export const MultiScenarioComparisonModal: React.FC<MultiScenarioComparisonModal
                 </thead>
                 <tbody className="divide-y divide-white/5">
                   {metricsList.map((m, idx) => (
-                    <tr key={idx} className="hover:bg-white/[0.02] transition-colors">
+                    <tr key={idx} className="hover:bg-raised transition-colors">
                       <td className="py-3.5 px-4 font-medium text-white/80">
                         {m.label}
                         <span className="text-[10px] text-white/40 ml-1.5 font-mono">({m.unit})</span>
@@ -167,7 +167,7 @@ export const MultiScenarioComparisonModal: React.FC<MultiScenarioComparisonModal
                                       ? 'bg-emerald-500/15 text-emerald-400 border border-emerald-500/20'
                                       : isWorse
                                       ? 'bg-red-500/15 text-red-400 border border-red-500/20'
-                                      : 'bg-white/10 text-white/60'
+                                      : 'bg-raised text-white/60'
                                   }`}
                                 >
                                   {diff > 0 ? '+' : ''}
@@ -188,7 +188,7 @@ export const MultiScenarioComparisonModal: React.FC<MultiScenarioComparisonModal
           {/* Tradeoffs Matrix Comparison */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {scenarios.map((sc) => (
-              <div key={sc.scenarioId} className="p-4 rounded-xl border border-white/10 bg-white/[0.02] flex flex-col justify-between">
+              <div key={sc.scenarioId} className="p-4 rounded-xl border border-white/10 bg-raised flex flex-col justify-between">
                 <div>
                   <h4 className="text-sm font-semibold text-white mb-2">{sc.scenarioName} Trade-offs</h4>
                   
@@ -228,7 +228,7 @@ export const MultiScenarioComparisonModal: React.FC<MultiScenarioComparisonModal
                     onSelectScenario(sc);
                     onClose();
                   }}
-                  className="mt-4 w-full py-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-semibold text-white transition-colors cursor-pointer"
+                  className="mt-4 w-full py-2 rounded-lg bg-raised hover:bg-raised border border-white/10 text-xs font-semibold text-white transition-colors cursor-pointer"
                 >
                   Open Full Detail
                 </button>
@@ -238,13 +238,13 @@ export const MultiScenarioComparisonModal: React.FC<MultiScenarioComparisonModal
         </div>
 
         {/* Footer */}
-        <div className="px-6 py-4 border-t border-white/10 bg-white/[0.02] flex items-center justify-between">
+        <div className="px-6 py-4 border-t border-white/10 bg-raised flex items-center justify-between">
           <p className="text-xs text-white/40 font-mono">
             WasteFlow Nexus Scenario Matrix • Direct engine parameters and measured trade-offs
           </p>
           <button
             onClick={onClose}
-            className="px-5 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs font-semibold transition-colors cursor-pointer"
+            className="px-5 py-2 rounded-xl bg-raised hover:bg-raised text-white text-xs font-semibold transition-colors cursor-pointer"
           >
             Close Comparison
           </button>

@@ -75,7 +75,7 @@ export const EnvironmentalTrends: React.FC<EnvironmentalTrendsProps> = ({
   const range = maxVal - minVal || 1
 
   return (
-    <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/10 backdrop-blur-md shadow-xl space-y-4">
+    <div className="p-5 rounded-2xl bg-raised border border-white/10  shadow-xl space-y-4">
       {/* Top Controls Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-white/5">
         <div>
@@ -84,7 +84,7 @@ export const EnvironmentalTrends: React.FC<EnvironmentalTrendsProps> = ({
               <BarChart2 size={14} className="text-emerald-400" />
               TEMPORAL ENVIRONMENTAL TRENDS
             </span>
-            <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-white/5 text-white/60">
+            <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-raised text-white/60">
               LEDGER VERIFIED
             </span>
           </div>
@@ -94,7 +94,7 @@ export const EnvironmentalTrends: React.FC<EnvironmentalTrendsProps> = ({
         </div>
 
         {/* Time-Range Selector Buttons */}
-        <div className="flex items-center gap-1 p-1 rounded-xl bg-white/5 border border-white/10 self-start sm:self-auto font-mono text-[10.5px]">
+        <div className="flex items-center gap-1 p-1 rounded-xl bg-raised border border-white/10 self-start sm:self-auto font-mono text-[10.5px]">
           {(['24H', '7D', '30D', 'CUSTOM'] as const).map((r) => (
             <button
               key={r}
@@ -102,7 +102,7 @@ export const EnvironmentalTrends: React.FC<EnvironmentalTrendsProps> = ({
               className={`px-3 py-1 rounded-lg transition-all cursor-pointer ${
                 timeRange === r
                   ? 'bg-emerald-500/20 text-emerald-300 font-bold border border-emerald-500/30'
-                  : 'text-white/60 hover:text-white hover:bg-white/5'
+                  : 'text-white/60 hover:text-white hover:bg-raised'
               }`}
             >
               {r === '24H' ? '24 HOURS' : r === '7D' ? '7 DAYS' : r === '30D' ? '30 DAYS' : 'CUSTOM'}
@@ -123,8 +123,8 @@ export const EnvironmentalTrends: React.FC<EnvironmentalTrendsProps> = ({
               onClick={() => setSelectedMetric(key)}
               className={`px-3 py-1.5 rounded-xl border transition-all shrink-0 cursor-pointer ${
                 isSelected
-                  ? 'border-white/30 bg-white/10 text-white font-bold shadow-md'
-                  : 'border-white/5 bg-white/[0.015] text-white/50 hover:text-white hover:border-white/15'
+                  ? 'border-white/30 bg-raised text-white font-bold shadow-md'
+                  : 'border-white/5 bg-raised text-white/50 hover:text-white hover:border-white/15'
               }`}
             >
               {cfg.label}
@@ -134,7 +134,7 @@ export const EnvironmentalTrends: React.FC<EnvironmentalTrendsProps> = ({
       </div>
 
       {/* SVG Trend Chart Visualization */}
-      <div className="p-4 rounded-xl bg-white/[0.01] border border-white/5 space-y-3">
+      <div className="p-4 rounded-xl bg-raised border border-white/5 space-y-3">
         <div className="flex items-center justify-between text-xs font-mono">
           <span className="text-white/50">{config.label} Dynamics ({config.unit})</span>
           <div className="flex items-center gap-3">

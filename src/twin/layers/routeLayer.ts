@@ -46,8 +46,8 @@ export function drawRoutes(rc: RenderContext) {
     // ── casing: soft glow scaled by magnitude ────────────────
     if (showFlow) {
       path()
-      ctx.strokeStyle = rgbaStr(baseColor, (0.05 + link.magnitude * 0.045) * focus)
-      ctx.lineWidth = link.width * 2.6
+      ctx.strokeStyle = rgbaStr(baseColor, (0.02 + link.magnitude * 0.02) * focus)
+      ctx.lineWidth = link.width * 1.5
       ctx.stroke()
     }
 
@@ -55,8 +55,8 @@ export function drawRoutes(rc: RenderContext) {
     if (showFlow && !inEmissions && link.status !== 'normal') {
       path()
       const stateColor = blocked ? C.critical : link.status === 'congested' ? C.warn : C.flow
-      ctx.strokeStyle = rgbaStr(stateColor, (blocked ? 0.3 : 0.13) * focus)
-      ctx.lineWidth = link.width * (blocked ? 1.5 : 1.3)
+      ctx.strokeStyle = rgbaStr(stateColor, (blocked ? 0.2 : 0.08) * focus)
+      ctx.lineWidth = link.width * (blocked ? 1.2 : 1.1)
       if (blocked) {
         ctx.save()
         ctx.setLineDash([9, 7])

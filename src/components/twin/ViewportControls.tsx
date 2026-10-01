@@ -37,7 +37,7 @@ export function ViewportControls({ className }: { className?: string }) {
             onClick={onClick}
             disabled={disabled}
             aria-label={label}
-            className="focus-ring grid h-7 w-7 place-items-center text-ink-dim transition-all duration-200 ease-nexus hover:bg-white/[0.06] hover:text-signal disabled:pointer-events-none disabled:opacity-30"
+            className="focus-ring grid h-7 w-7 place-items-center text-ink-dim transition-all duration-200 ease-nexus hover:bg-raised hover:text-signal disabled:pointer-events-none disabled:opacity-30"
           >
             <Icon size={13} strokeWidth={1.75} />
           </button>

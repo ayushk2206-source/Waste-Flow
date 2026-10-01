@@ -96,7 +96,7 @@ export function OptimizationPage() {
       description="Turn system bottlenecks into measurable interventions."
     >
       {/* ── TOP ACTION BAR ───────────────────────────────────── */}
-      <div className="flex flex-col gap-3 border border-hair bg-white/[0.015] p-3 sm:flex-row sm:items-center sm:justify-between mb-4">
+      <div className="flex flex-col gap-3 border border-hair bg-raised p-3 sm:flex-row sm:items-center sm:justify-between mb-4">
         <div className="flex items-center gap-2">
           <span className="border border-signal/40 bg-signal/10 px-2 py-0.5 font-mono text-[8px] tracking-[0.14em] text-signal uppercase">
             ● RECOMMENDATION ENGINE ACTIVE

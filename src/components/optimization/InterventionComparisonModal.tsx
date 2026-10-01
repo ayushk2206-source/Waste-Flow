@@ -41,7 +41,7 @@ export function InterventionComparisonModal({
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="fixed inset-0 z-50 grid place-items-center bg-void/70 p-3 backdrop-blur-[4px]"
+        className="fixed inset-0 z-50 grid place-items-center bg-void p-3 -[4px]"
         onClick={onClose}
       >
         <motion.article
@@ -53,7 +53,7 @@ export function InterventionComparisonModal({
           className="surface ticks atmos-noise relative flex max-h-[92vh] w-full max-w-[1040px] flex-col border border-hair bg-void shadow-panel overflow-hidden"
         >
           {/* Header */}
-          <header className="flex items-center justify-between border-b border-hair px-5 py-3.5 bg-white/[0.015]">
+          <header className="flex items-center justify-between border-b border-hair px-5 py-3.5 bg-raised">
             <div className="flex items-center gap-2">
               <Columns size={14} className="text-signal" />
               <h2 className="label-tech text-[10px] text-ink">
@@ -85,7 +85,7 @@ export function InterventionComparisonModal({
               {recommendations.map((rec) => (
                 <div
                   key={rec.id}
-                  className="surface border border-hair/70 bg-white/[0.02] p-3 flex flex-col justify-between"
+                  className="surface border border-hair/70 bg-raised p-3 flex flex-col justify-between"
                 >
                   <div>
                     <div className="flex items-center justify-between">
@@ -129,7 +129,7 @@ export function InterventionComparisonModal({
               {/* Row: Strategy Score */}
               <MetricLabel label="STRATEGY SCORE" unit={`(${selectedStrategy})`} />
               {recommendations.map((rec) => (
-                <div key={rec.id} className="border border-hair/40 bg-white/[0.01] p-2 text-center">
+                <div key={rec.id} className="border border-hair/40 bg-raised p-2 text-center">
                   <span className="font-mono text-[13px] font-bold text-signal">
                     {rec.strategyScores[selectedStrategy]} / 100
                   </span>
@@ -231,7 +231,7 @@ export function InterventionComparisonModal({
               {/* Row: Tradeoffs */}
               <MetricLabel label="FEASIBILITY & CAPEX" unit="ESTIMATE" />
               {recommendations.map((rec) => (
-                <div key={rec.id} className="border border-hair/40 bg-white/[0.01] p-2 text-[9.5px] font-mono">
+                <div key={rec.id} className="border border-hair/40 bg-raised p-2 text-[9.5px] font-mono">
                   <div className="flex justify-between text-ink-ghost">
                     <span>CAPEX:</span>
                     <span className="font-semibold text-ink">{rec.tradeoffs.capitalRequirement}</span>
@@ -246,7 +246,7 @@ export function InterventionComparisonModal({
           </div>
 
           {/* Footer */}
-          <footer className="flex justify-end border-t border-hair px-5 py-3 bg-white/[0.02]">
+          <footer className="flex justify-end border-t border-hair px-5 py-3 bg-raised">
             <Button size="sm" variant="outline" onClick={onClose} className="font-mono text-[8.5px]">
               CLOSE MATRIX
             </Button>
@@ -279,7 +279,7 @@ function ComparisonCell({
   isPositive: boolean
 }) {
   return (
-    <div className="border border-hair/40 bg-white/[0.01] p-2 text-center flex flex-col justify-center">
+    <div className="border border-hair/40 bg-raised p-2 text-center flex flex-col justify-center">
       <span
         className={cn(
           'data-value text-[12px] font-bold leading-none',

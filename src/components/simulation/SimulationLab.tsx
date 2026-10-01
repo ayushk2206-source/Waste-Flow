@@ -95,7 +95,7 @@ export function SimulationLab() {
       description="Test operational changes before deploying them."
     >
       {/* ── TOP ACTION & STATUS BAR ─────────────────────────── */}
-      <div className="flex flex-col gap-3 border border-hair bg-white/[0.015] p-3.5 sm:flex-row sm:items-center sm:justify-between">
+      <div className="flex flex-col gap-3 border border-hair bg-raised p-3.5 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-center gap-2">
           {/* Status Indicator */}
           <span
@@ -104,7 +104,7 @@ export function SimulationLab() {
                 ? 'border-signal/50 bg-signal/10 text-signal'
                 : simulationState === 'editing'
                   ? 'border-warn/50 bg-warn/10 text-warn'
-                  : 'border-white/10 bg-white/[0.04] text-ink-ghost'
+                  : 'border-white/10 bg-raised text-ink-ghost'
             }`}
           >
             {simulationState === 'completed' ? '● SIMULATION ACTIVE' : simulationState === 'editing' ? '● PARAMETERS MODIFIED' : '● BASELINE SYSTEM'}
@@ -115,7 +115,7 @@ export function SimulationLab() {
             type="text"
             value={scenarioName}
             onChange={(e) => setScenarioName(e.target.value)}
-            className="border border-hair bg-void/90 px-2.5 py-1 font-mono text-[9.5px] text-ink focus:border-signal/60 focus:outline-none min-w-[200px]"
+            className="border border-hair bg-void px-2.5 py-1 font-mono text-[9.5px] text-ink focus:border-signal/60 focus:outline-none min-w-[200px]"
             placeholder="Scenario Name..."
           />
         </div>
@@ -167,7 +167,7 @@ export function SimulationLab() {
       {/* ── TWO-PART WORKSPACE (Phase 6 §2) ─────────────────── */}
       <section className="mt-5 grid gap-4 lg:grid-cols-[1.15fr_1fr]">
         {/* LEFT: SCENARIO CONTROLS */}
-        <div className="border border-hair bg-white/[0.015] p-3.5">
+        <div className="border border-hair bg-raised p-3.5">
           <ScenarioControls
             parameters={simulationParameters}
             onChange={setSimulationParameters}
@@ -178,7 +178,7 @@ export function SimulationLab() {
         {/* RIGHT: LIVE SIMULATION PREVIEW & DIGITAL TWIN ANCHOR */}
         <div className="space-y-3.5">
           {/* Live Preview Card */}
-          <div className="border border-hair bg-white/[0.015] p-3.5">
+          <div className="border border-hair bg-raised p-3.5">
             <div className="flex items-center justify-between border-b border-hair pb-2">
               <div className="flex items-center gap-1.5">
                 <Activity size={12} className="text-signal" />
@@ -190,7 +190,7 @@ export function SimulationLab() {
             </div>
 
             <div className="mt-3 grid grid-cols-2 gap-2 font-mono text-[9px]">
-              <div className="border border-hair/50 bg-white/[0.01] p-2">
+              <div className="border border-hair/50 bg-raised p-2">
                 <span className="label-tech block text-[7px] text-ink-ghost">KANJURMARG SORTING</span>
                 <div className="mt-1 flex items-baseline justify-between">
                   <span className="text-ink-faint">EST. LOAD:</span>
@@ -204,7 +204,7 @@ export function SimulationLab() {
                 </div>
               </div>
 
-              <div className="border border-hair/50 bg-white/[0.01] p-2">
+              <div className="border border-hair/50 bg-raised p-2">
                 <span className="label-tech block text-[7px] text-ink-ghost">SION ARTERIAL (RT-06)</span>
                 <div className="mt-1 flex items-baseline justify-between">
                   <span className="text-ink-faint">CORRIDOR:</span>
@@ -227,7 +227,7 @@ export function SimulationLab() {
           </div>
 
           {/* Digital Twin View Link */}
-          <div className="border border-hair bg-white/[0.015] p-3.5">
+          <div className="border border-hair bg-raised p-3.5">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-1.5">
                 <MapPin size={12} className="text-signal" />

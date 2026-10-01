@@ -52,7 +52,7 @@ export function StrategySelector({
                 'group relative flex flex-col justify-between border p-3 text-left transition-all',
                 isSelected
                   ? 'border-signal/70 bg-signal/[0.07] shadow-sm'
-                  : 'border-hair bg-white/[0.015] hover:border-hair2 hover:bg-white/[0.035]',
+                  : 'border-hair bg-raised hover:border-hair2 hover:bg-raised',
               )}
             >
               {isSelected && (
@@ -87,7 +87,7 @@ export function StrategySelector({
                 {strat.focusAreas.map((focus) => (
                   <span
                     key={focus}
-                    className="border border-white/[0.08] bg-white/[0.02] px-1.5 py-[1px] font-mono text-[7px] text-ink-ghost"
+                    className="border border-white/[0.08] bg-raised px-1.5 py-[1px] font-mono text-[7px] text-ink-ghost"
                   >
                     {focus}
                   </span>

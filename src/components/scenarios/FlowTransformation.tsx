@@ -26,7 +26,7 @@ export function FlowTransformation({
   return (
     <div
       className={cn(
-        'surface ticks border border-hair bg-white/[0.015] p-4 shadow-panel',
+        'surface ticks border border-hair bg-raised p-4 shadow-panel',
         className,
       )}
     >
@@ -170,7 +170,7 @@ function FlowStep({
         ? 'border-warn/60 bg-warn/[0.04]'
         : tone === 'signal' || tone === 'normal'
           ? 'border-signal/60 bg-signal/[0.04]'
-          : 'border-hair bg-white/[0.01]'
+          : 'border-hair bg-raised'
 
   const badgeColor =
     tone === 'critical'

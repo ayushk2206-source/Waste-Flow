@@ -68,10 +68,9 @@
     @apply font-mono tabular-nums;
   }
 
-  /* Primary structural surface. Sharp corners, hairline border, no glass mush. */
+  /* Primary structural surface. Sharp corners, solid panel, thin hair borders. */
   .surface {
-    @apply relative border border-hair bg-panel/85 backdrop-blur-xl;
-    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0));
+    @apply relative border border-hair bg-panel;
   }
 
   .surface-flat {
@@ -117,15 +116,9 @@
     text-shadow: 0 1px 12px rgba(0, 0, 0, 0.85);
   }
 
-  /* Film grain / scanline atmosphere, kept extremely subtle */
+  /* Film grain / scanline atmosphere, kept extremely subtle or removed entirely for a cleaner UI */
   .atmos-noise::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    opacity: 0.035;
-    mix-blend-mode: overlay;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/></filter><rect width='140' height='140' filter='url(%23n)' opacity='0.5'/></svg>");
+    display: none;
   }
 
   .mask-fade-y {

@@ -20,7 +20,7 @@ export interface ImpactDatum {
 
 export function ImpactMetrics({ data, className }: { data: ImpactDatum[]; className?: string }) {
   return (
-    <dl className={cn('grid grid-cols-2 gap-px border border-hair bg-white/[0.05]', className)}>
+    <dl className={cn('grid grid-cols-2 gap-px border border-hair bg-raised', className)}>
       {data.map((d, i) => (
         <ImpactCell key={d.label} datum={d} delay={i * 0.06} />
       ))}
@@ -55,7 +55,7 @@ function ImpactCell({ datum, delay }: { datum: ImpactDatum; delay: number }) {
           : 'text-ink'
 
   return (
-    <div className="bg-void/60 px-3 py-2.5">
+    <div className="bg-void px-3 py-2.5">
       <dt className="label-tech text-[8px]">{datum.label}</dt>
       <dd className={cn('data-value mt-1 text-[15px] leading-none', toneClass)}>
         {formatNumber(shown, datum.digits ?? 0)}

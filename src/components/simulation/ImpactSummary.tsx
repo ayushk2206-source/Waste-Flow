@@ -79,7 +79,7 @@ function ImpactBadge({
   const isZero = pct === 0
 
   const colorClass = isZero
-    ? 'text-ink-dim border-hair bg-white/[0.01]'
+    ? 'text-ink-dim border-hair bg-raised'
     : isGood
       ? 'text-signal border-signal/40 bg-signal/[0.06]'
       : 'text-critical border-critical/40 bg-critical/[0.06]'

@@ -78,7 +78,7 @@ export function OperationsView() {
         <div className="overflow-x-auto border border-hair">
           <table className="w-full min-w-[860px] border-collapse text-left">
             <thead>
-              <tr className="border-b border-hair bg-white/[0.02]">
+              <tr className="border-b border-hair bg-raised">
                 {['UNIT', 'TYPE', 'STATUS', 'LOAD', 'CAPACITY', 'CORRIDOR', 'DESTINATION', 'ETA', 'FUEL'].map((h) => (
                   <th key={h} className="px-3 py-2 font-mono text-[8.5px] font-normal uppercase tracking-[0.14em] text-ink-ghost">
                     {h}
@@ -90,7 +90,7 @@ export function OperationsView() {
               {model.snapshot.vehicles.map((v) => {
                 const route = model.routeDerivedById[v.routeId]
                 return (
-                  <tr key={v.id} className="border-b border-hair/60 transition-colors last:border-0 hover:bg-white/[0.03]">
+                  <tr key={v.id} className="border-b border-hair/60 transition-colors last:border-0 hover:bg-raised">
                     <td className="px-3 py-2 font-mono text-[10px] tracking-[0.1em] text-ink">{v.code}</td>
                     <td className="px-3 py-2 font-mono text-[9.5px] tracking-[0.08em] text-ink-faint">
                       {VEHICLE_KIND_LABEL[v.kind]}
@@ -138,7 +138,7 @@ export function OperationsView() {
         <div className="overflow-x-auto border border-hair">
           <table className="w-full min-w-[780px] border-collapse text-left">
             <thead>
-              <tr className="border-b border-hair bg-white/[0.02]">
+              <tr className="border-b border-hair bg-raised">
                 {['ZONE', 'GENERATED', 'COLLECTED', 'UNCOLLECTED', 'RATE', 'FREQUENCY', 'VEHICLES', 'AVG CAP'].map((h) => (
                   <th key={h} className="px-3 py-2 font-mono text-[8.5px] font-normal uppercase tracking-[0.14em] text-ink-ghost">
                     {h}
@@ -153,7 +153,7 @@ export function OperationsView() {
                   <tr
                     key={z.facility.id}
                     onClick={() => openZone(z.facility.id)}
-                    className="cursor-pointer border-b border-hair/60 transition-colors last:border-0 hover:bg-white/[0.035]"
+                    className="cursor-pointer border-b border-hair/60 transition-colors last:border-0 hover:bg-raised"
                   >
                     <td className="px-3 py-2">
                       <span className="flex items-center gap-2">
@@ -199,7 +199,7 @@ export function OperationsView() {
             <button
               key={d.facility.id}
               onClick={() => openZone(d.facility.id)}
-              className="focus-ring group border border-hair bg-white/[0.015] px-3 py-2.5 text-left transition-colors hover:border-hair2 hover:bg-white/[0.04]"
+              className="focus-ring group border border-hair bg-raised px-3 py-2.5 text-left transition-colors hover:border-hair2 hover:bg-raised"
             >
               <div className="flex items-center gap-2">
                 <span className="h-1.5 w-1.5" style={{ background: NODE_STATE_COLOR_HEX[d.state] }} />

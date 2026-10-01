@@ -54,7 +54,7 @@ export function MaterialPipeline({ className }: { className?: string }) {
                 onMouseLeave={() => hover(null)}
                 className={cn(
                   'focus-ring group/stage relative w-[104px] px-2 py-1.5 text-left transition-colors duration-200 ease-nexus',
-                  isSelected ? 'bg-signal/[0.08]' : 'hover:bg-white/[0.04]',
+                  isSelected ? 'bg-signal/[0.08]' : 'hover:bg-raised',
                 )}
               >
                 <span
@@ -75,7 +75,7 @@ export function MaterialPipeline({ className }: { className?: string }) {
                 <span className="data-value mt-1 block text-[15px] leading-none text-ink">
                   {formatNumber(stage.volume)}
                 </span>
-                <span className="mt-1.5 block h-[2px] w-full bg-white/[0.06]">
+                <span className="mt-1.5 block h-[2px] w-full bg-raised">
                   <span
                     className="block h-full transition-[width] duration-700 ease-nexus"
                     style={{ width: `${Math.max(6, (stage.volume / max) * 100)}%`, background: stateColor, opacity: 0.85 }}
@@ -88,7 +88,7 @@ export function MaterialPipeline({ className }: { className?: string }) {
 
               {i < stageData.length - 1 && (
                 <span className="relative flex w-6 items-center justify-center">
-                  <span className="absolute inset-x-0 top-1/2 h-px bg-white/[0.09]" />
+                  <span className="absolute inset-x-0 top-1/2 h-px bg-raised" />
                   <span className="relative block h-1 w-1 animate-sweep bg-signal/70" />
                 </span>
               )}

@@ -23,7 +23,7 @@ export function EarlyWarningCard({
     ? 'border-critical/50 bg-critical/[0.04]'
     : isApproaching
       ? 'border-warn/50 bg-warn/[0.04]'
-      : 'border-hair bg-white/[0.015]'
+      : 'border-hair bg-raised'
 
   const badgeColor = isCriticalNow ? '#E2595B' : isApproaching ? '#E5B44C' : '#4FE3C1'
 

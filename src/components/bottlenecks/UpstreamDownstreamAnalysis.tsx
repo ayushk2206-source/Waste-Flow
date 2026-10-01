@@ -25,7 +25,7 @@ export function UpstreamDownstreamAnalysis({
   return (
     <div className={`space-y-4 ${className ?? ''}`}>
       {/* ── UPSTREAM SECTION ─────────────────────────────────── */}
-      <div className="border border-hair bg-white/[0.015] p-3.5">
+      <div className="border border-hair bg-raised p-3.5">
         <div className="flex items-center justify-between border-b border-hair pb-2">
           <div className="flex items-center gap-2">
             <span className="grid h-5 w-5 place-items-center bg-signal/10 text-signal">
@@ -46,7 +46,7 @@ export function UpstreamDownstreamAnalysis({
             return (
               <div
                 key={src.routeId}
-                className="border border-hair/60 bg-white/[0.01] p-2.5 transition-colors hover:bg-white/[0.03]"
+                className="border border-hair/60 bg-raised p-2.5 transition-colors hover:bg-raised"
               >
                 <div className="flex items-baseline justify-between gap-2">
                   <div className="flex items-center gap-1.5">
@@ -69,7 +69,7 @@ export function UpstreamDownstreamAnalysis({
                   </span>
                 </div>
 
-                <div className="mt-1 h-1 w-full bg-white/[0.04]">
+                <div className="mt-1 h-1 w-full bg-raised">
                   <div
                     className="h-full"
                     style={{
@@ -95,7 +95,7 @@ export function UpstreamDownstreamAnalysis({
       </div>
 
       {/* ── DOWNSTREAM SECTION ───────────────────────────────── */}
-      <div className="border border-hair bg-white/[0.015] p-3.5">
+      <div className="border border-hair bg-raised p-3.5">
         <div className="flex items-center justify-between border-b border-hair pb-2">
           <div className="flex items-center gap-2">
             <span className="grid h-5 w-5 place-items-center bg-cyan-500/10 text-cyan-400">
@@ -116,7 +116,7 @@ export function UpstreamDownstreamAnalysis({
             return (
               <div
                 key={dst.routeId}
-                className="border border-hair/60 bg-white/[0.01] p-2.5 transition-colors hover:bg-white/[0.03]"
+                className="border border-hair/60 bg-raised p-2.5 transition-colors hover:bg-raised"
               >
                 <div className="flex items-baseline justify-between gap-2">
                   <div className="flex items-center gap-1.5">

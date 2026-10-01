@@ -33,7 +33,7 @@ export const EnvironmentalHotspots: React.FC<EnvironmentalHotspotsProps> = ({ ho
   }
 
   return (
-    <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/10 backdrop-blur-md shadow-xl space-y-4">
+    <div className="p-5 rounded-2xl bg-raised border border-white/10  shadow-xl space-y-4">
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-white/5">
         <div>
@@ -42,7 +42,7 @@ export const EnvironmentalHotspots: React.FC<EnvironmentalHotspotsProps> = ({ ho
               <MapPin size={14} />
               DIGITAL TWIN ENVIRONMENTAL HOTSPOTS
             </span>
-            <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-white/5 text-white/60">
+            <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-raised text-white/60">
               SPATIAL MAPPING
             </span>
           </div>
@@ -53,7 +53,7 @@ export const EnvironmentalHotspots: React.FC<EnvironmentalHotspotsProps> = ({ ho
 
         <button
           onClick={() => handleFocusOnTwin(selectedHotspot)}
-          className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 text-white text-xs font-medium transition-colors border border-white/10 cursor-pointer self-start sm:self-auto"
+          className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-raised hover:bg-raised text-white text-xs font-medium transition-colors border border-white/10 cursor-pointer self-start sm:self-auto"
         >
           <Crosshair size={13} className="text-emerald-400" />
           <span>Inspect on Digital Twin</span>
@@ -74,7 +74,7 @@ export const EnvironmentalHotspots: React.FC<EnvironmentalHotspotsProps> = ({ ho
                 className={`p-3.5 rounded-xl border transition-all cursor-pointer ${
                   isSelected
                     ? 'border-emerald-500/40 bg-emerald-500/[0.04] shadow-lg'
-                    : 'border-white/5 bg-white/[0.015] hover:border-white/15'
+                    : 'border-white/5 bg-raised hover:border-white/15'
                 }`}
               >
                 <div className="flex items-center justify-between mb-1.5">
@@ -92,7 +92,7 @@ export const EnvironmentalHotspots: React.FC<EnvironmentalHotspotsProps> = ({ ho
         </div>
 
         {/* Selected Hotspot Detailed Dossier (Right) */}
-        <div className="lg:col-span-7 p-4 rounded-xl bg-white/[0.015] border border-white/5 space-y-4">
+        <div className="lg:col-span-7 p-4 rounded-xl bg-raised border border-white/5 space-y-4">
           <div className="flex items-start justify-between gap-3">
             <div>
               <div className="flex items-center gap-2">

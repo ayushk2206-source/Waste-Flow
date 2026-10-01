@@ -6,7 +6,7 @@ export function IntroSlide() {
       <motion.div 
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
-        className="text-center bg-black/50 p-12 rounded-xl backdrop-blur-md border border-white/10"
+        className="text-center bg-black/50 p-12 rounded-xl  border border-white/10"
       >
         <div className="text-emerald-500 font-mono text-sm tracking-[0.3em] mb-6">WELCOME TO</div>
         <h1 className="text-6xl font-light text-white tracking-tight mb-4">

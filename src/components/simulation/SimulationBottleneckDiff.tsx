@@ -32,7 +32,7 @@ export function SimulationBottleneckDiff({
           return (
             <div
               key={item.facilityId}
-              className="flex items-start justify-between border border-hair bg-white/[0.015] p-3 transition-all"
+              className="flex items-start justify-between border border-hair bg-raised p-3 transition-all"
             >
               <div className="min-w-0 flex-1 pr-2">
                 <div className="flex items-center gap-1.5">
@@ -60,7 +60,7 @@ export function SimulationBottleneckDiff({
         })}
 
         {resolvedBottlenecks.length === 0 && (
-          <div className="border border-hair bg-white/[0.015] p-3 text-center font-mono text-[9px] text-ink-faint sm:col-span-2">
+          <div className="border border-hair bg-raised p-3 text-center font-mono text-[9px] text-ink-faint sm:col-span-2">
             No active baseline bottlenecks to compare.
           </div>
         )}

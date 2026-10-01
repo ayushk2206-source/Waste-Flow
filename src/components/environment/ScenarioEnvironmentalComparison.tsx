@@ -72,7 +72,7 @@ export const ScenarioEnvironmentalComparison: React.FC<ScenarioEnvironmentalComp
   return (
     <div className="space-y-6">
       {/* 13 & 18. Scenario Comparison Box */}
-      <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/10 backdrop-blur-md shadow-xl space-y-5">
+      <div className="p-5 rounded-2xl bg-raised border border-white/10  shadow-xl space-y-5">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-white/5">
           <div>
             <div className="flex items-center gap-2">
@@ -111,7 +111,7 @@ export const ScenarioEnvironmentalComparison: React.FC<ScenarioEnvironmentalComp
               className={`px-3 py-1.5 rounded-xl font-mono text-xs font-semibold border transition-all cursor-pointer flex items-center gap-1.5 ${
                 isScenarioOverlayActive
                   ? 'bg-purple-500 text-black border-purple-400 shadow-lg shadow-purple-500/20'
-                  : 'bg-white/5 hover:bg-white/10 text-white/70 hover:text-white border-white/10'
+                  : 'bg-raised hover:bg-raised text-white/70 hover:text-white border-white/10'
               }`}
             >
               <span>{isScenarioOverlayActive ? '● OVERLAY APPLIED' : 'APPLY OVERLAY'}</span>
@@ -119,7 +119,7 @@ export const ScenarioEnvironmentalComparison: React.FC<ScenarioEnvironmentalComp
 
             <button
               onClick={() => setView('scenarios')}
-              className="px-2.5 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 text-white/60 hover:text-white border border-white/10 text-xs transition-colors"
+              className="px-2.5 py-1.5 rounded-xl bg-raised hover:bg-raised text-white/60 hover:text-white border border-white/10 text-xs transition-colors"
               title="Open full Scenario Lab"
             >
               <ExternalLink size={13} />
@@ -130,7 +130,7 @@ export const ScenarioEnvironmentalComparison: React.FC<ScenarioEnvironmentalComp
         {/* Selected Scenario Comparison Grid */}
         <div className="grid grid-cols-2 md:grid-cols-5 gap-3 font-mono">
           {/* CO2e */}
-          <div className="p-3.5 rounded-xl bg-white/[0.015] border border-white/5">
+          <div className="p-3.5 rounded-xl bg-raised border border-white/5">
             <span className="text-[10px] text-white/40 uppercase block">CO₂e EMISSIONS</span>
             <div className="flex items-baseline gap-1 mt-1 text-sm font-bold text-white">
               <span>{baselineCo2eT} T</span>
@@ -144,7 +144,7 @@ export const ScenarioEnvironmentalComparison: React.FC<ScenarioEnvironmentalComp
           </div>
 
           {/* Landfill Waste */}
-          <div className="p-3.5 rounded-xl bg-white/[0.015] border border-white/5">
+          <div className="p-3.5 rounded-xl bg-raised border border-white/5">
             <span className="text-[10px] text-white/40 uppercase block">LANDFILL WASTE</span>
             <div className="flex items-baseline gap-1 mt-1 text-sm font-bold text-white">
               <span>{formatNumber(baselineLandfillT)} T</span>
@@ -158,7 +158,7 @@ export const ScenarioEnvironmentalComparison: React.FC<ScenarioEnvironmentalComp
           </div>
 
           {/* Recovery Rate */}
-          <div className="p-3.5 rounded-xl bg-white/[0.015] border border-white/5">
+          <div className="p-3.5 rounded-xl bg-raised border border-white/5">
             <span className="text-[10px] text-white/40 uppercase block">RECOVERY RATE</span>
             <div className="flex items-baseline gap-1 mt-1 text-sm font-bold text-white">
               <span>{summary.recoveryRatePct}%</span>
@@ -172,7 +172,7 @@ export const ScenarioEnvironmentalComparison: React.FC<ScenarioEnvironmentalComp
           </div>
 
           {/* Fuel Consumption */}
-          <div className="p-3.5 rounded-xl bg-white/[0.015] border border-white/5">
+          <div className="p-3.5 rounded-xl bg-raised border border-white/5">
             <span className="text-[10px] text-white/40 uppercase block">FLEET FUEL BURN</span>
             <div className="flex items-baseline gap-1 mt-1 text-sm font-bold text-white">
               <span>{formatNumber(baselineFuelL)} L</span>
@@ -186,7 +186,7 @@ export const ScenarioEnvironmentalComparison: React.FC<ScenarioEnvironmentalComp
           </div>
 
           {/* Trips */}
-          <div className="p-3.5 rounded-xl bg-white/[0.015] border border-white/5 col-span-2 md:col-span-1">
+          <div className="p-3.5 rounded-xl bg-raised border border-white/5 col-span-2 md:col-span-1">
             <span className="text-[10px] text-white/40 uppercase block">VEHICLE DISPATCHES</span>
             <div className="flex items-baseline gap-1 mt-1 text-sm font-bold text-white">
               <span>{baselineTrips}</span>
@@ -209,7 +209,7 @@ export const ScenarioEnvironmentalComparison: React.FC<ScenarioEnvironmentalComp
             {timelineSteps.map((step, idx) => (
               <div
                 key={idx}
-                className="p-3 rounded-xl bg-white/[0.01] border border-white/5 flex flex-col justify-between"
+                className="p-3 rounded-xl bg-raised border border-white/5 flex flex-col justify-between"
               >
                 <div>
                   <span className="text-[9px] font-mono text-white/40 block">{step.stage}</span>
@@ -223,7 +223,7 @@ export const ScenarioEnvironmentalComparison: React.FC<ScenarioEnvironmentalComp
       </div>
 
       {/* 15. "WHERE CAN WE IMPROVE?" OPPORTUNITIES SECTION */}
-      <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/10 backdrop-blur-md shadow-xl space-y-4">
+      <div className="p-5 rounded-2xl bg-raised border border-white/10  shadow-xl space-y-4">
         <div className="flex items-center justify-between pb-3 border-b border-white/5">
           <div>
             <div className="flex items-center gap-2">
@@ -245,11 +245,11 @@ export const ScenarioEnvironmentalComparison: React.FC<ScenarioEnvironmentalComp
           {opportunities.map((opp) => (
             <div
               key={opp.id}
-              className="p-4 rounded-xl bg-white/[0.015] border border-white/5 hover:border-emerald-500/30 transition-all flex flex-col justify-between"
+              className="p-4 rounded-xl bg-raised border border-white/5 hover:border-emerald-500/30 transition-all flex flex-col justify-between"
             >
               <div>
                 <div className="flex items-center justify-between mb-1.5">
-                  <span className="text-[9.5px] px-2 py-0.5 rounded font-mono font-bold bg-white/5 text-white/60">
+                  <span className="text-[9.5px] px-2 py-0.5 rounded font-mono font-bold bg-raised text-white/60">
                     {opp.category}
                   </span>
                   <span className="text-[10px] font-mono text-emerald-400 font-semibold">

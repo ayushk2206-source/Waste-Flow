@@ -71,7 +71,7 @@ export const EnvironmentalKPIPrioritizedGrid: React.FC<EnvironmentalKPIPrioritiz
   ]
 
   return (
-    <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/10 backdrop-blur-md shadow-xl space-y-5">
+    <div className="p-5 rounded-2xl bg-raised border border-white/10  shadow-xl space-y-5">
       {/* Header */}
       <div className="flex items-center justify-between pb-3 border-b border-white/5">
         <div>
@@ -80,7 +80,7 @@ export const EnvironmentalKPIPrioritizedGrid: React.FC<EnvironmentalKPIPrioritiz
               <Activity size={14} className="text-teal-400" />
               SYSTEM PERFORMANCE SCORECARD
             </span>
-            <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-white/5 text-white/60">
+            <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-raised text-white/60">
               TODAY VS PREVIOUS PERIOD
             </span>
           </div>
@@ -140,7 +140,7 @@ export const EnvironmentalKPIPrioritizedGrid: React.FC<EnvironmentalKPIPrioritiz
           {secondaryKPIs.map((s, idx) => (
             <div
               key={idx}
-              className="p-2.5 rounded-lg bg-white/[0.015] border border-white/5 text-center font-mono"
+              className="p-2.5 rounded-lg bg-raised border border-white/5 text-center font-mono"
             >
               <span className="text-[9.5px] text-white/40 block truncate" title={s.label}>
                 {s.label}

@@ -9,10 +9,10 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        void: '#040506',
-        base: '#08090B',
-        panel: '#0B0D10',
-        raised: '#101317',
+        void: '#050505',
+        base: '#080808',
+        panel: '#0D0D0D',
+        raised: '#141414',
         ink: {
           DEFAULT: '#E9ECF1',
           dim: '#8B939E',

@@ -25,7 +25,7 @@ export const WasteDestinationFlow: React.FC<WasteDestinationFlowProps> = ({ stag
   const linearPipeline = [generated, collected, transferred, sorted, processed]
 
   return (
-    <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/10 backdrop-blur-md shadow-xl space-y-5">
+    <div className="p-5 rounded-2xl bg-raised border border-white/10  shadow-xl space-y-5">
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-white/5">
         <div>
@@ -33,7 +33,7 @@ export const WasteDestinationFlow: React.FC<WasteDestinationFlowProps> = ({ stag
             <span className="text-xs font-mono uppercase tracking-wider text-teal-400 font-semibold">
               PHYSICAL STREAM DYNAMICS
             </span>
-            <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-white/5 text-white/60">
+            <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-raised text-white/60">
               MASS BALANCE CASCADE
             </span>
           </div>
@@ -60,7 +60,7 @@ export const WasteDestinationFlow: React.FC<WasteDestinationFlowProps> = ({ stag
                 className={`w-full max-w-2xl p-4 rounded-xl border transition-all ${
                   isBottleneck
                     ? 'border-amber-500/30 bg-amber-500/[0.03]'
-                    : 'border-white/10 bg-white/[0.02] hover:border-white/20'
+                    : 'border-white/10 bg-raised hover:border-white/20'
                 } flex items-center justify-between shadow-md`}
               >
                 <div className="flex items-center gap-3.5">
@@ -68,7 +68,7 @@ export const WasteDestinationFlow: React.FC<WasteDestinationFlowProps> = ({ stag
                     className={`w-9 h-9 rounded-xl flex items-center justify-center font-mono text-xs font-bold ${
                       isBottleneck
                         ? 'bg-amber-500/10 text-amber-400 border border-amber-500/20'
-                        : 'bg-white/5 text-white/80 border border-white/10'
+                        : 'bg-raised text-white/80 border border-white/10'
                     }`}
                   >
                     0{idx + 1}
@@ -117,9 +117,9 @@ export const WasteDestinationFlow: React.FC<WasteDestinationFlowProps> = ({ stag
 
         {/* Transition Fork to Dual Endpoints (Recovered vs Landfill) */}
         <div className="flex flex-col items-center w-full max-w-2xl pt-1">
-          <div className="w-[1.5px] h-4 bg-white/20" />
-          <div className="w-full max-w-md h-[1.5px] bg-white/20 relative">
-            <div className="absolute left-1/2 -top-1 -translate-x-1/2 w-2 h-2 rounded-full bg-white/40" />
+          <div className="w-[1.5px] h-4 bg-raised" />
+          <div className="w-full max-w-md h-[1.5px] bg-raised relative">
+            <div className="absolute left-1/2 -top-1 -translate-x-1/2 w-2 h-2 rounded-full bg-raised" />
           </div>
           <div className="flex justify-between w-full max-w-md">
             <div className="w-[1.5px] h-4 bg-emerald-500/40" />

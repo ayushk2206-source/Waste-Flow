@@ -28,7 +28,7 @@ export function CinematicSimulationLoader({ onComplete }: { onComplete: () => vo
   }, [currentStep, onComplete])
 
   return (
-    <div className="fixed inset-0 z-50 grid place-items-center bg-void/80 backdrop-blur-[5px]">
+    <div className="fixed inset-0 z-50 grid place-items-center bg-void -[5px]">
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -74,9 +74,9 @@ export function CinematicSimulationLoader({ onComplete }: { onComplete: () => vo
         </div>
 
         {/* Progress bar */}
-        <div className="mt-5 h-1 w-full bg-white/[0.06]">
+        <div className="mt-5 h-1 w-full bg-raised">
           <motion.div
-            className="h-full bg-signal shadow-glow-sm"
+            className="h-full bg-signal -sm"
             initial={{ width: '0%' }}
             animate={{ width: `${((currentStep + 1) / STEPS.length) * 100}%` }}
             transition={{ duration: 0.25 }}
