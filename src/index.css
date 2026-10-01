@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─────────────────────────────────────────────────────────────
+   WASTEFLOW NEXUS — global foundation
+   Dark-first. Near-black foundation, restrained luminous accents.
+   ───────────────────────────────────────────────────────────── */
+
+@layer base {
+  :root {
+    color-scheme: dark;
+    --wf-signal: 79 227 193;
+  }
+
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    @apply bg-void text-ink font-sans antialiased;
+    margin: 0;
+    overflow: hidden;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'ss01';
+    overscroll-behavior: none;
+  }
+
+  ::selection {
+    background: rgba(79, 227, 193, 0.24);
+    color: #fff;
+  }
+
+  button {
+    font: inherit;
+    color: inherit;
+  }
+
+  /* Restrained scrollbars — the interface should feel machined, not web-y */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.18);
+  }
+}
+
+@layer components {
+  /* Data labels: compact, technical, monospaced */
+  .label-tech {
+    @apply font-mono text-label uppercase tracking-[0.16em] text-ink-faint;
+  }
+
+  .data-value {
+    @apply font-mono tabular-nums;
+  }
+
+  /* Primary structural surface. Sharp corners, hairline border, no glass mush. */
+  .surface {
+    @apply relative border border-hair bg-panel/85 backdrop-blur-xl;
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0));
+  }
+
+  .surface-flat {
+    @apply relative border border-hair bg-panel;
+  }
+
+  /* Corner ticks — the recurring "instrumentation" motif */
+  .ticks::before,
+  .ticks::after {
+    content: '';
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    pointer-events: none;
+  }
+  .ticks::before {
+    top: -1px;
+    left: -1px;
+    border-top: 1px solid rgba(79, 227, 193, 0.5);
+    border-left: 1px solid rgba(79, 227, 193, 0.5);
+  }
+  .ticks::after {
+    bottom: -1px;
+    right: -1px;
+    border-bottom: 1px solid rgba(79, 227, 193, 0.5);
+    border-right: 1px solid rgba(79, 227, 193, 0.5);
+  }
+
+  .hair-grid {
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  .focus-ring {
+    @apply outline-none focus-visible:ring-1 focus-visible:ring-signal/60 focus-visible:ring-offset-0;
+  }
+}
+
+@layer utilities {
+  .text-shadow-hud {
+    text-shadow: 0 1px 12px rgba(0, 0, 0, 0.85);
+  }
+
+  /* Film grain / scanline atmosphere, kept extremely subtle */
+  .atmos-noise::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.035;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/></filter><rect width='140' height='140' filter='url(%23n)' opacity='0.5'/></svg>");
+  }
+
+  .mask-fade-y {
+    mask-image: linear-gradient(to bottom, transparent, #000 8%, #000 92%, transparent);
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Honor reduced-motion: atmosphere stays, movement stops */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* Mouse cursors for the twin canvas */
+.cursor-grab-twin {
+  cursor: grab;
+}
+.cursor-grab-twin:active {
+  cursor: grabbing;
+}
